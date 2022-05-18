@@ -1,0 +1,19 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+//        classpath(ClassPaths.androidToolsGradle)
+//        classpath(ClassPaths.kotlinGradlePlugin)
+//        classpath(ClassPaths.koinGradlePlugin)
+        classpath "com.android.tools.build:gradle:7.0.1"
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21'
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
