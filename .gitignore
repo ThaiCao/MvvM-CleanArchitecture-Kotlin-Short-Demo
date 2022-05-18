@@ -1,0 +1,10 @@
+# Root
+/.idea/
+/.gradle/
+/build/
+/local.properties
+*.iml
+
+# Build Src
+/buildSrc/.gradle/
+/buildSrc/build/
