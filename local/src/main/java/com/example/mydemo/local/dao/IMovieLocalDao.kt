@@ -5,15 +5,16 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.mydemo.local.models.movies.MovieLocal
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface IMovieLocalDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun addMovie(movieCache: MovieLocal)
+    suspend fun addMovie(movieCache: MovieLocal)
 
     @Query("SELECT * FROM movies")
-    fun getMovies(): List<MovieLocal>
+    suspend fun getMovies(): List<MovieLocal>
 
     @Query("DELETE FROM movies")
-    fun deleteMovies()
+    suspend fun deleteMovies()
 }

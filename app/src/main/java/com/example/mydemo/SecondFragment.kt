@@ -6,11 +6,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.mydemo.common.FragmentParams
 import com.example.mydemo.databinding.FragmentSecondBinding
+import kotlinx.parcelize.Parcelize
 
-/**
- * A simple [Fragment] subclass as the second destination in the navigation.
- */
+
+@Parcelize
+data class MovieDetailFragmentParam(
+    var name: String? = "",
+    var id: Long = 0,
+    var posterPath: String? = "",
+    var title: String? = "",
+    var profilePath: String? = "",
+    var voteAverage: Double? = 0.0,
+) : FragmentParams
+
 class SecondFragment : Fragment() {
 
     private var _binding: FragmentSecondBinding? = null
@@ -32,9 +42,7 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonSecond.setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
-        }
+
     }
 
     override fun onDestroyView() {

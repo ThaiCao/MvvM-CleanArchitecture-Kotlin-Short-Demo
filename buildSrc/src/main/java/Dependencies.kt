@@ -88,4 +88,5 @@ object Modules {
     const val presentation = ":presentation"
     const val local = ":local"
     const val remote = ":remote"
+    const val common = ":common"
 }

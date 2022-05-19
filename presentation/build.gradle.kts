@@ -33,6 +33,14 @@ android {
 }
 
 dependencies {
+    implementation(project(Modules.domain))
+    implementation(Kotlin.kotlin)
+    implementation(Di.core)
+    implementation(Di.koin)
+    implementation(Coroutines.core)
+    implementation(Coroutines.coroutines)
+    implementation(AndroidX.viewModel)
+    implementation(AndroidX.liveData)
 
     implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.appcompat:appcompat:1.4.1")

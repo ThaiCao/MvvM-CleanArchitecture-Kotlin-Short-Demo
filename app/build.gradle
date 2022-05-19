@@ -23,9 +23,21 @@ android {
     }
 
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+
+//            buildConfigField "String", "API_KEY", properties["API_KEY"].toString()
+//            buildConfigField "String", "BASE_URL", properties["BASE_URL"].toString()
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+//            buildConfigField "String", "API_KEY", properties["API_KEY"].toString()
+//            buildConfigField "String", "BASE_URL", properties["BASE_URL"].toString()
         }
     }
     compileOptions {
@@ -44,6 +56,7 @@ android {
 }
 
 dependencies {
+    implementation(project(Modules.common))
     implementation(project(Modules.data))
     implementation(project(Modules.domain))
     implementation(project(Modules.presentation))
@@ -75,7 +88,6 @@ dependencies {
 
     implementation(Network.retrofit)
     implementation(Network.gson)
-    implementation(Network.okhttpLoggingInterceptor)
 
 //    implementation(Google.gson)
 

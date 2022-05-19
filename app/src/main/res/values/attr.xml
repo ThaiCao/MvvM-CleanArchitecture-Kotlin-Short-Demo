@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="themeColorPrimary" format="reference" />
+    <attr name="themeTextColorPrimary" format="reference" />
+    <attr name="themeBackgroundPrimary" format="reference" />
+    <attr name="themeBackgroundSecondary" format="reference" />
+    <attr name="themeBackgroundWarning" format="reference" />
+    <attr name="themeTextLinkColor" format="reference" />
+    <attr name="themeDialogButtonColor" format="reference" />
+    <attr name="themeColorAccent" format="reference" />
+    <attr name="themeBgToast" format="reference" />
+
+    <attr name="themeColorUnready" format="reference" />
+
+    <attr name="fontTitleBold" format="reference" />
+    <attr name="fontTitleHeader" format="reference" />
+    <attr name="fontTitleSemiBold" format="reference" />
+    <attr name="fontButton" format="reference" />
+    <attr name="fontParagraphRegular" format="reference" />
+    <attr name="fontParagraphSemiBold" format="reference" />
+    <attr name="fontParagraphLarge" format="reference" />
+
+    <attr name="themeColorError" format="reference" />
+    <attr name="themeColorShape" format="reference"/>
+
+    <attr name="themeTextColorButtonPrimary" format="reference" />
+    <attr name="themeTextColorButtonSecondary" format="reference" />
+    <attr name="themeTextColorButtonSecondaryOverDown" format="reference" />
+
+    <attr name="themeBackgroundButton" format="reference" />
+    <attr name="themeBackgroundButtonOverDown" format="reference" />
+
+    <attr name="themeBackgroundButtonSecondary" format="reference" />
+
+    <attr name="themeBackgroundButtonUnready" format="reference" />
+
+    <attr name="themeTextColorButtonUnready" format="reference" />
+</resources>

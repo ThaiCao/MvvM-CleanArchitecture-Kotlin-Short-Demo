@@ -9,6 +9,7 @@ dependencies {
 
     implementation(Kotlin.kotlin)
     implementation(Di.core)
+    implementation(Di.koin)
     implementation(Coroutines.core)
     implementation(Coroutines.coroutines)
     implementation(Database.room)

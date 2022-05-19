@@ -1,3 +1,39 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_normal">12dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_extra_large">24dp</dimen>
+
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_medium">8dp</dimen>
+    <dimen name="margin_normal">12dp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="margin_extra_large">24dp</dimen>
+    <dimen name="margin_home_item">24dp</dimen>
+    <dimen name="margin_top_with_status_bar">36dp</dimen>
+
+    <dimen name="radius_small">3dp</dimen>
+    <dimen name="radius_medium">5dp</dimen>
+    <dimen name="radius_extra_large">25dp</dimen>
+
+    <dimen name="text_size_large">24sp</dimen>
+    <dimen name="text_size_medium">20sp</dimen>
+    <dimen name="text_size_title_header">18sp</dimen>
+    <dimen name="text_size_small">16sp</dimen>
+    <dimen name="text_size_tiny">14sp</dimen>
+    <dimen name="text_size_paragraph_large">16sp</dimen>
+    <dimen name="text_size_paragraph_medium">14sp</dimen>
+    <dimen name="text_size_paragraph_small">12sp</dimen>
+    <dimen name="text_size_paragraph_tiny">10sp</dimen>
+    <dimen name="btn_label_medium">16sp</dimen>
+
+    <dimen name="btn_padding_medium">12dp</dimen>
+    <dimen name="btn_padding_small">8dp</dimen>
+    <dimen name="btn_height">48dp</dimen>
+    <dimen name="btn_height_small">38dp</dimen>
+
+    <dimen name="border_thin">1dp</dimen>
+    <dimen name="border_thick">2dp</dimen>
 </resources>

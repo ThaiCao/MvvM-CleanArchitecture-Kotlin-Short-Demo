@@ -11,8 +11,7 @@ val useCaseModule = module {
 
     factory<IGetMoviePopularUseCase>{
         GetMoviePopularUseCaseImpl(
-            movieRepository = get(),
-            dispatcherProvider = get()
+            movieRepository = get()
         )
     }
 }
