@@ -21,7 +21,7 @@ class MainActivity : BaseActivity(R.layout.activity_main) {
     override fun onCreate(savedInstanceState: Bundle?) {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         super.onCreate(savedInstanceState)
-        setSupportActionBar(binding.toolbar)
+//        setSupportActionBar(binding.toolbar)
         setupNavigator()
     }
 

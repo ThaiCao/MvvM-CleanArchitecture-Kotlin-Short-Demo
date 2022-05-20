@@ -104,7 +104,7 @@ private fun provideInterceptors(
 ): List<Interceptor> {
     return listOf(
         provideHeaderInterceptor(networkConfigs),
-        provideGzipInterceptor(),
+//        provideGzipInterceptor(),
         provideLoggingInterceptor(networkConfigs)
     )
 }

@@ -23,3 +23,6 @@ fun String?.isNotNullOrBlank(): Boolean = !this.isNullOrBlank()
 
 fun CharSequence?.isNotNullOrBlank(): Boolean = this.toString().isNotNullOrBlank()
 
+fun String?.toPosterPath(): String{
+    return "https://image.tmdb.org/t/p/w500$this"
+}

@@ -10,7 +10,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fitsSystemWindows="true">
 
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+
+        </com.google.android.material.appbar.AppBarLayout>
         <Button
             android:id="@+id/button_second"
             android:layout_width="wrap_content"

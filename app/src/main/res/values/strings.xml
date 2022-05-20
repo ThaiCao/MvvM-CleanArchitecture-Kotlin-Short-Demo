@@ -48,5 +48,7 @@
     <string name="ok">OK</string>
     <string name="close">Close</string>
     <string name="error_general_error_message">Somethings went wrong!</string>
+    <string name="not_available">Not available</string>
+    <string name="error_movie_not_found">Movie is not available</string>
 
 </resources>
