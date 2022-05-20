@@ -38,10 +38,6 @@ class PopularMovieFragment : BaseFragment(R.layout.fragment_popular_movie) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-       /* binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_to_movie_detail)
-        }*/
         bindView()
         observer()
         viewModel.fetchPopularMovies()
@@ -58,7 +54,6 @@ class PopularMovieFragment : BaseFragment(R.layout.fragment_popular_movie) {
          }
 
          popularMovies.observe(viewLifecycleOwner) {
-             android.util.Log.e("TEST_DATA","ListData = $it")
              moviePopularAdapter.submitList(it)
 
          }

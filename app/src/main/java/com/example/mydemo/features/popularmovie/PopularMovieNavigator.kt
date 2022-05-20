@@ -1,6 +1,6 @@
 package com.example.mydemo.features.popularmovie
 
-import com.example.mydemo.MovieDetailFragmentParam
+import com.example.mydemo.features.moviedetail.MovieDetailFragmentParam
 import com.example.mydemo.R
 import com.example.mydemo.base.navigator.BaseNavigator
 import com.example.mydemo.base.navigator.BaseNavigatorImpl
@@ -18,12 +18,7 @@ class PopularMovieNavigatorImpl : BaseNavigatorImpl(), PopularMovieNavigator{
             destinationId = R.id.action_to_movie_detail,
             bundle = {
                 MovieDetailFragmentParam(
-                    id = movie.id,
-                    title = movie.title,
-                    name = movie.name,
-                    posterPath = movie.posterPath,
-                    profilePath = movie.profilePath,
-                    voteAverage = movie.voteAverage,
+                    movie = movie
                 ).toBundle()
             },
             navOptions = { navOptionsBottomToTop(withAnim = true) }
