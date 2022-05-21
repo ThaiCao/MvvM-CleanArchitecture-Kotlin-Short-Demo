@@ -33,6 +33,7 @@ android {
 }
 
 dependencies {
+    implementation(project(Modules.common))
     implementation(project(Modules.domain))
 
     implementation(Kotlin.kotlin)

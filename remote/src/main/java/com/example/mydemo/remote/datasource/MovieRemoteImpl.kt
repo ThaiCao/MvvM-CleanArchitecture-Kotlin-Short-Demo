@@ -13,8 +13,5 @@ class MovieRemoteImpl(
         return moviesService.getPopularsMovies().listOfMoviesResponse.map{
             movieRemoteMapper.mapFromApiResponseModel(it)
         }
-       /* val data = moviesService.getPopularsMovies()
-        android.util.Log.e("TEST_DATA","data= $data")
-        return arrayListOf()*/
     }
 }

@@ -1,19 +1,15 @@
 package com.example.mydemo.local.datasource
 
-import com.example.mydemo.data.datasource.movie.local.IMovieLocalStore
+import com.example.mydemo.data.datasource.movie.local.db.IMovieLocalStore
 import com.example.mydemo.data.models.MovieEntity
 import com.example.mydemo.local.dao.IMovieLocalDao
 import com.example.mydemo.local.mapper.movie.MovieLocalMapper
-import kotlinx.coroutines.flow.*
 
 class MovieLocalImpl(
     private val movieLocalDao: IMovieLocalDao,
     private val movieLocalMapper: MovieLocalMapper,
     ) : IMovieLocalStore {
     override suspend fun getPopularsMovies(): List<MovieEntity> {
-       /* return movieLocalDao.getMovies().onEach { }.map{
-            movieLocalMapper.mapFromLocal(it)
-        }*/
         return movieLocalDao.getMovies().map{
             movieLocalMapper.mapFromLocal(it)
         }
@@ -31,10 +27,8 @@ class MovieLocalImpl(
         return movieLocalDao.getMovies().isNotEmpty()
     }
 
-    override fun isExpired(): Boolean {
+    override fun isExpired(lastUpdateTime: Long): Boolean {
         val currentTime = System.currentTimeMillis()
-//        val lastUpdateTime = this.getLastCacheUpdateTimeMillis()
-        val lastUpdateTime = 0
         return currentTime - lastUpdateTime > EXPIRATION_TIME
     }
 

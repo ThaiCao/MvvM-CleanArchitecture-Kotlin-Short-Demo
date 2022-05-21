@@ -35,6 +35,7 @@ android {
 
 dependencies {
     implementation(project(Modules.domain))
+    implementation(project(Modules.local))
     implementation(Kotlin.kotlin)
     implementation(Di.core)
     implementation(Di.koin)

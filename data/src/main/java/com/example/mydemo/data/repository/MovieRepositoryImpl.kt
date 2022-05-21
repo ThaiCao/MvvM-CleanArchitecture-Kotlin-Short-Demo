@@ -12,14 +12,13 @@ class MovieRepositoryImpl(
     private val movieDataStoreFactory: IMovieDataStoreFactory
 ) : IMovieRepository {
     override suspend fun getPopularMovies(): Flow<List<Movie>> {
+        val movies = movieDataStoreFactory.getDataStore().getPopularsMovies()
+        movieDataStoreFactory.getLocalDataStore().saveMovies(movies)
+        movieDataStoreFactory.getMovieSharedPreferenceDataStore().saveMovieCacheExpiredTime(System.currentTimeMillis())
         return flow{
             emit(
-                movieDataStoreFactory.getDataStore().getPopularsMovies().map{movieMapper.mapFromEntity(it)}
+                movies.map{movieMapper.mapFromEntity(it)}
             )
         }
-    }
-
-    override suspend fun saveMovies(listMovies: List<Movie>) {
-        TODO("Not yet implemented")
     }
 }

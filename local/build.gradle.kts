@@ -5,6 +5,7 @@ plugins {
     id(Plugins.kotlinKapt)
 }
 dependencies {
+    implementation(project(Modules.common))
     implementation(project(Modules.data))
 
     implementation(Kotlin.kotlin)

@@ -5,5 +5,4 @@ import kotlinx.coroutines.flow.Flow
 
 interface IMovieRepository {
     suspend fun getPopularMovies(): Flow<List<Movie>>
-    suspend fun saveMovies(listMovies: List<Movie>)
 }
