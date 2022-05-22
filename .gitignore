@@ -8,3 +8,5 @@
 # Build Src
 /buildSrc/.gradle/
 /buildSrc/build/
+buildSrc/.gradle/
+buildSrc/build/

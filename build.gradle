@@ -1,4 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply {
+    plugin(Plugins.jacoco)
+}
 buildscript {
     repositories {
         google()
@@ -6,13 +9,62 @@ buildscript {
         jcenter()
     }
     dependencies {
-//        classpath(ClassPaths.androidToolsGradle)
-//        classpath(ClassPaths.kotlinGradlePlugin)
-//        classpath(ClassPaths.koinGradlePlugin)
-        classpath "com.android.tools.build:gradle:7.0.4"
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21'
+        classpath(ClassPaths.androidToolsGradle)
+        classpath(ClassPaths.kotlinGradlePlugin)
+        classpath(ClassPaths.jacocoGradlePlugin)
     }
 }
+
+//allprojects {
+//    repositories {
+//        google()
+//        mavenCentral()
+//        jcenter()
+//    }
+//
+//    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile::class).all {
+//        kotlinOptions {
+//            freeCompilerArgs = freeCompilerArgs + arrayOf(
+//                    "-Xuse-experimental=kotlinx.coroutines.ExperimentalCoroutinesApi",
+//                    "-Xuse-experimental=kotlinx.coroutines.InternalCoroutinesApi",
+//                    "-Xuse-experimental=org.koin.core.component.KoinApiExtension",
+//                    "-Xuse-experimental=org.koin.core.annotation.KoinInternal"
+//            )
+//        }
+//    }
+//
+//    (rootProject.extensions["junitJacoco"] as? com.vanniktech.android.junit.jacoco.JunitJacocoExtension)
+//    ?.apply {
+//        jacocoVersion = "0.8.7"
+//        excludes = listOf(
+//
+//                "**/data/di/*",
+//                "**/data/models/*",
+//
+//                "**/local/di/*",
+//                "**/local/db/*",
+//                "**/local/models/*",
+//
+//                "**/remote/di/*",
+//                "**/remote/models/*",
+//
+//                "**/domain/di/*",
+//                "**/domain/models/*",
+//
+//                "**/presentation/di/*",
+//                "**/presentation/model/*",
+//                "**/presentation/util/*",
+//
+//
+//                "**/mydemo/common/*",
+//                "**/mydemo/common/*",
+//                "**/mydemo/utils/common/*ExtKt.*",
+//
+//                "**//BuildConfig.*"
+//        )
+////            includeNoLocationClasses = true
+//    }
+//}
 
 task clean(type: Delete) {
     delete rootProject.buildDir

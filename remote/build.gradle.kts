@@ -35,5 +35,5 @@ dependencies {
 }
 
 android {
-    compileSdk = 31
+    compileSdk = 32
 }

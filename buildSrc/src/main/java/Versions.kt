@@ -20,10 +20,10 @@ object Versions {
     const val gson = "2.8.6"
     const val retrofit = "2.9.0"
     const val okhttpLoggingInterceptor = "4.9.0"
-    const val junit = "4.13"
+    const val junit = "4.13.2"
     const val coreTesting = "1.1.1"
     const val testCore = "1.3.0"
-    const val corountinesTest = "1.4.0"
+    const val corountinesTest = "1.6.0"
     const val mockk = "1.11.0"
     const val robolectric = "4.5.1"
 }

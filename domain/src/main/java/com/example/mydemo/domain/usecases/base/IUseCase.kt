@@ -33,7 +33,7 @@ interface IUseCase<out Type : Any, in Params> {
                     }
             } catch (ex: Throwable) {
 
-                print("ERROR: ${this@IUseCase.javaClass.toString()} throw $ex")
+                print("ERROR: ${this@IUseCase.javaClass} throw $ex")
 
                 onResult(Result.failure(ex))
             }

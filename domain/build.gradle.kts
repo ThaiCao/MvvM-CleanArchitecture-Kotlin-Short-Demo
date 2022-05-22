@@ -1,7 +1,6 @@
 plugins {
-    id(Plugins.androidLibrary)
-    id(Plugins.kotlinAndroid)
-    id(Plugins.kotlinKapt)
+    id(Plugins.kotlin)
+    jacoco
 }
 
 
@@ -12,11 +11,9 @@ dependencies {
 
     implementation(Coroutines.core)
     implementation(Coroutines.coroutines)
-}
-android {
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    compileSdk = 31
+
+    testImplementation(Test.junit)
+    testImplementation(Test.coroutine)
+    testImplementation(Test.mockk)
+    testImplementation(project(Test.toolsTest, "testArtifacts"))
 }

@@ -6,6 +6,9 @@ object Plugins {
     const val kotlin_parcelize = "kotlin-parcelize"
     const val kotlinKapt = "kotlin-kapt"
     const val koin = "koin"
+    const val jacoco = "com.vanniktech.android.junit.jacoco"
+    const val kotlin = "kotlin"
+    const val java = "java-library"
 }
 
 //for classpath
@@ -13,6 +16,7 @@ object ClassPaths {
     const val androidToolsGradle = "com.android.tools.build:gradle:${Versions.gradle}"
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
     const val koinGradlePlugin = "org.koin:koin-gradle-plugin:${Versions.koin}"
+    const val jacocoGradlePlugin = "com.vanniktech:gradle-android-junit-jacoco-plugin:${Versions.jacoco}"
 }
 
 object Kotlin {
@@ -78,7 +82,7 @@ object Test {
     const val test_core = "androidx.test:core:${Versions.testCore}"
     const val coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.corountinesTest}"
     const val mockk = "io.mockk:mockk:${Versions.mockk}"
-    const val toolsTest = ":tools-test"
+    const val toolsTest = ":tooltest"
     const val robolectric = "org.robolectric:robolectric:${Versions.robolectric}"
 }
 
