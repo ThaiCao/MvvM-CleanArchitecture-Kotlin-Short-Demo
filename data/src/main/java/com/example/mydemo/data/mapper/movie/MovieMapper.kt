@@ -8,8 +8,8 @@ class MovieMapper: IEntityMapper<MovieEntity, Movie> {
     override fun mapFromEntity(entity: MovieEntity): Movie {
         return Movie(
             id = entity.id,
-            title = entity.movieTitle,
-            name = entity.movieName,
+            title = entity.title,
+            name = entity.name,
             posterPath = entity.posterPath,
             profilePath = entity.profilePath,
             voteAverage = entity.voteAverage,
@@ -19,8 +19,8 @@ class MovieMapper: IEntityMapper<MovieEntity, Movie> {
     override fun mapToEntity(domain: Movie): MovieEntity {
         return MovieEntity(
             id = domain.id,
-            movieTitle = domain.title,
-            movieName = domain.name,
+            title = domain.title,
+            name = domain.name,
             posterPath = domain.posterPath,
             profilePath = domain.profilePath,
             voteAverage = domain.voteAverage,

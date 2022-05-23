@@ -8,8 +8,8 @@ class MovieLocalMapper : ILocalMapper<MovieLocal, MovieEntity>{
     override fun mapFromLocal(local: MovieLocal): MovieEntity {
         return MovieEntity(
             id = local.movieId,
-            movieTitle = local.title,
-            movieName = local.name,
+            title = local.title,
+            name = local.name,
             posterPath = local.posterPath,
             profilePath = local.profilePath,
             voteAverage = local.voteAverage,
@@ -19,8 +19,8 @@ class MovieLocalMapper : ILocalMapper<MovieLocal, MovieEntity>{
     override fun mapToLocal(entity: MovieEntity): MovieLocal {
         return MovieLocal(
             movieId = entity.id,
-            name = entity.movieName,
-            title = entity.movieTitle,
+            name = entity.name,
+            title = entity.title,
             posterPath = entity.posterPath,
             profilePath = entity.profilePath,
             voteAverage = entity.voteAverage

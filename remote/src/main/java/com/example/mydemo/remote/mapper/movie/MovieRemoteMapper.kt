@@ -9,8 +9,8 @@ class MovieRemoteMapper : IRemoteMapper<MovieModel, MovieEntity> {
     override fun mapFromApiResponseModel(model: MovieModel): MovieEntity {
         return MovieEntity(
             id = model.id,
-            movieTitle = model.title,
-            movieName = model.name,
+            title = model.title,
+            name = model.name,
             posterPath = model.posterPath,
             profilePath = model.profilePath,
             voteAverage = model.voteAverage,

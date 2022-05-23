@@ -61,6 +61,10 @@ android {
     lintOptions {
         isCheckReleaseBuilds  = false
     }
+    testOptions {
+        unitTests.isIncludeAndroidResources = true
+        unitTests.isReturnDefaultValues = true
+    }
 }
 
 dependencies {

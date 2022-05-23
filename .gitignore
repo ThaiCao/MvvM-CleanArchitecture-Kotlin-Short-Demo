@@ -5,10 +5,6 @@
 /local.properties
 *.iml
 
-# Build Src
-/buildSrc/.gradle/
-/buildSrc/build/
-
 # Compiled class file
 *.class
 
@@ -28,3 +24,5 @@
 *.zip
 *.tar.gz
 *.rar
+buildSrc/.gradle/
+buildSrc/build/
