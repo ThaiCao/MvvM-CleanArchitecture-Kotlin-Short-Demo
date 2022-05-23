@@ -1,4 +1,4 @@
-package com.example.mydemo.presentation.viewmodels
+package com.example.mydemo.presentation.viewmodels.moviedetail
 
 import com.example.mydemo.presentation.base.BaseViewModel
 import com.example.mydemo.presentation.models.movie.IMovieItemUi

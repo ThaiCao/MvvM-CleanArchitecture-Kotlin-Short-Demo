@@ -1,16 +1,17 @@
-package com.example.mydemo.data
+package com.example.mydemo.local.mapper
 
-import com.example.mydemo.data.base.DataTest
-import com.example.mydemo.data.mapper.movie.MovieMapper
 import com.example.mydemo.data.models.MovieEntity
-import com.example.mydemo.domain.models.movies.Movie
+import com.example.mydemo.local.mapper.movie.MovieLocalMapper
+import com.example.mydemo.local.models.movies.MovieLocal
+import com.example.mydemo.tooltest.BaseTest
 import com.example.mydemo.tooltest.autoWire
 import org.hamcrest.CoreMatchers
 import org.hamcrest.MatcherAssert
 import org.junit.Test
 
-class MovieMapperTest : DataTest() {
-    private val movieMapper : MovieMapper = autoWire()
+class MovieLocalMapperTest : BaseTest(){
+
+    private val movieMapper : MovieLocalMapper = autoWire()
 
     @Test
     fun `map from entity`() {
@@ -18,7 +19,7 @@ class MovieMapperTest : DataTest() {
         val movieEntity = mockMovieEntity()
 
         // Act
-        val movie = movieMapper.mapFromEntity(movieEntity)
+        val movie = movieMapper.mapToLocal(movieEntity)
 
         // Assert
         assertMovieDataEquality(movieEntity, movie)
@@ -27,10 +28,10 @@ class MovieMapperTest : DataTest() {
     @Test
     fun `map to entity`() {
         // Arrange
-        val movie = mockMovie()
+        val movie = mockMovieLocal()
 
         // Act
-        val movieEntity = movieMapper.mapToEntity(movie)
+        val movieEntity = movieMapper.mapFromLocal(movie)
 
         // Assert
         assertMovieDataEquality(movieEntity, movie)
@@ -48,9 +49,9 @@ class MovieMapperTest : DataTest() {
         )
     }
 
-    private fun mockMovie(): Movie {
-        return Movie(
-            id = 100,
+    private fun mockMovieLocal(): MovieLocal {
+        return MovieLocal(
+            movieId  = 100,
             title = "",
             name = "",
             voteAverage = 3.8,
@@ -59,13 +60,12 @@ class MovieMapperTest : DataTest() {
         )
     }
 
-    private fun assertMovieDataEquality(movieEntity: MovieEntity, movie: Movie) {
-        MatcherAssert.assertThat(movieEntity.id, CoreMatchers.`is`(movie.id))
+    private fun assertMovieDataEquality(movieEntity: MovieEntity, movie: MovieLocal) {
+        MatcherAssert.assertThat(movieEntity.id, CoreMatchers.`is`(movie.movieId))
         MatcherAssert.assertThat(movieEntity.name, CoreMatchers.`is`(movie.name))
         MatcherAssert.assertThat(movieEntity.title, CoreMatchers.`is`(movie.title))
         MatcherAssert.assertThat(movieEntity.voteAverage, CoreMatchers.`is`(movie.voteAverage))
         MatcherAssert.assertThat(movieEntity.profilePath, CoreMatchers.`is`(movie.profilePath))
         MatcherAssert.assertThat(movieEntity.posterPath, CoreMatchers.`is`(movie.posterPath))
     }
-
 }

@@ -24,5 +24,13 @@
 *.zip
 *.tar.gz
 *.rar
+/buildSrc/.gradle/
+/buildSrc/build/
+
+*.bin
+*.lock
+*.tab
+*.at
+*.keystream
 buildSrc/.gradle/
 buildSrc/build/

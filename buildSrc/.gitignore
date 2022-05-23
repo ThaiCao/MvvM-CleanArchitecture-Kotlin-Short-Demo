@@ -1,2 +1,13 @@
-/build/
-/.gradle/
+*.iml
+*.ipr
+*.iws
+*.log*
+.idea/
+.DS_Store
+.gradle/
+build/
+out/
+*.bin
+*.lock
+*.tab
+*.at

@@ -10,7 +10,7 @@ import com.example.mydemo.common.FragmentParams
 import com.example.mydemo.common.utils.toPosterPath
 import com.example.mydemo.databinding.FragmentMovieDetailBinding
 import com.example.mydemo.presentation.models.movie.IMovieItemUi
-import com.example.mydemo.presentation.viewmodels.MovieDetailViewModel
+import com.example.mydemo.presentation.viewmodels.moviedetail.MovieDetailViewModel
 import com.example.mydemo.utils.common.bindImage
 import com.example.mydemo.utils.common.viewBinding
 import kotlinx.parcelize.Parcelize
