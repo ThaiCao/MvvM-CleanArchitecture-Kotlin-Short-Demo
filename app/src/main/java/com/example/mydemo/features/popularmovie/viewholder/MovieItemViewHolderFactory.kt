@@ -18,7 +18,7 @@ class MovieItemViewHolderFactory(private val onClickItemListener: ((IMovieItemUi
                 binding = parent[ItemPopularMovieBinding::inflate]
             )
             else -> error("Does not support type $viewType")
-        }as MovieViewHolder<IMovieItemUi>
+        } as MovieViewHolder<IMovieItemUi>
     }
 
     abstract class MovieViewHolder<D : IMovieItemUi>(itemView: View) :

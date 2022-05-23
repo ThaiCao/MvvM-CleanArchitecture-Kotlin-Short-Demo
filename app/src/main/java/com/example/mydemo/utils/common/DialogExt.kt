@@ -1,15 +1,11 @@
 package com.example.mydemo.utils.common
-
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import com.example.mydemo.R
 import com.example.mydemo.features.dialog.DialogFragmentLifecycleObserver
 import com.example.mydemo.features.dialog.InfoDialog
-
-
 fun <D : DialogFragment> AppCompatActivity.showDialogFragment(tag: String, dialog: () -> D): D? {
-
     return DialogFragmentLifecycleObserver<D>(
         lifecycleOwner = this,
         fm = supportFragmentManager,

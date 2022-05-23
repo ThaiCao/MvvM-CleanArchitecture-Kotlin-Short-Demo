@@ -9,7 +9,6 @@ import com.example.mydemo.presentation.base.BaseViewModel
 import com.example.mydemo.presentation.models.ErrorUi
 import com.example.mydemo.utils.common.showSimpleDialog
 
-
 interface StateUiOwner {
     val stateUiHandler: StateUiHandler get() = DefaultStateUiHandler()
     val viewModels: StateUiHandler.ViewModels get() = StateUiHandler.ViewModels()

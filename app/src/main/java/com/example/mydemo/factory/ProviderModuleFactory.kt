@@ -11,11 +11,11 @@ import com.example.mydemo.remote.di.retrofitModule
 import com.example.mydemo.remote.di.serviceNetworkModule
 import org.koin.core.module.Module
 
-interface ProviderModuleFactory{
+interface ProviderModuleFactory {
     fun get(): List<Module>
 }
 
-class ProviderModuleFactoryImpl : ProviderModuleFactory{
+class ProviderModuleFactoryImpl : ProviderModuleFactory {
     override fun get(): List<Module> {
         return listOf(
             repositoryModule,
@@ -29,5 +29,4 @@ class ProviderModuleFactoryImpl : ProviderModuleFactory{
             navigatorModule,
         )
     }
-
 }

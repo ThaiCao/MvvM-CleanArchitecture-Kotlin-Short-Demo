@@ -1,5 +1,5 @@
 object Versions {
-    const val gradle = "7.0.1"
+    const val gradle = "7.0.4"
     const val kotlin = "1.6.10"
     const val core = "1.7.0"
     const val koin = "3.1.2"
@@ -26,4 +26,5 @@ object Versions {
     const val corountinesTest = "1.6.0"
     const val mockk = "1.11.0"
     const val robolectric = "4.5.1"
+    const val pinterestKtlint = "0.40.0"
 }

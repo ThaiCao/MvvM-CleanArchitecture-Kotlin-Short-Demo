@@ -94,3 +94,8 @@ object Modules {
     const val remote = ":remote"
     const val common = ":common"
 }
+
+object CodeQuality {
+    const val pinterestKtlint = "com.pinterest:ktlint:${Versions.pinterestKtlint}"
+}
+

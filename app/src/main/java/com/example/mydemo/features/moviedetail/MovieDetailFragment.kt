@@ -16,7 +16,6 @@ import com.example.mydemo.utils.common.viewBinding
 import kotlinx.parcelize.Parcelize
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-
 @Parcelize
 data class MovieDetailFragmentParam(
     var movie: IMovieItemUi.MoviePresentation? = null,
@@ -32,7 +31,7 @@ class MovieDetailFragment : BaseFragment(R.layout.fragment_movie_detail) {
         super.onCreate(savedInstanceState)
         params = FragmentParams[arguments]
 
-        val movie = params?.movie?: run{ return}
+        val movie = params?.movie ?: run { return }
         viewModel.onGetCurrentMovie(movie)
     }
 
@@ -44,7 +43,6 @@ class MovieDetailFragment : BaseFragment(R.layout.fragment_movie_detail) {
     }
 
     private fun bindingView() = with(binding) {
-
     }
 
     private fun setupToolbar() {
@@ -62,10 +60,9 @@ class MovieDetailFragment : BaseFragment(R.layout.fragment_movie_detail) {
         }
     }
 
-    private fun onDisplayMovieDetail(movie: IMovieItemUi.MoviePresentation){
+    private fun onDisplayMovieDetail(movie: IMovieItemUi.MoviePresentation) {
         binding.tvMovieName.text = movie.title
         binding.tvVotes.text = movie.voteAverage.toString()
         binding.ivImageView.bindImage(movie.posterPath.toPosterPath())
     }
-
 }

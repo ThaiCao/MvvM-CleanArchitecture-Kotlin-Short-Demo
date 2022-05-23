@@ -7,6 +7,10 @@ plugins {
     jacoco
 }
 
+apply {
+    from(rootProject.file("ktlint.gradle.kts"))
+}
+
 android {
     compileSdk =  32
 

@@ -1,10 +1,7 @@
 package com.example.mydemo.features.popularmovie
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import com.example.mydemo.R
 import com.example.mydemo.base.adapter.DifferentAdapter
 import com.example.mydemo.base.decoration.SimpleSpaceDecoration
@@ -18,7 +15,6 @@ import com.example.mydemo.utils.common.toPx
 import com.example.mydemo.utils.common.viewBinding
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
-
 
 class PopularMovieFragment : BaseFragment(R.layout.fragment_popular_movie) {
 
@@ -49,14 +45,12 @@ class PopularMovieFragment : BaseFragment(R.layout.fragment_popular_movie) {
     }
 
     private fun observer() = with(viewModel) {
-         loading.observe(viewLifecycleOwner) {
-             showLoadingDialog(requireContext(), it)
-         }
-
-         popularMovies.observe(viewLifecycleOwner) {
-             moviePopularAdapter.submitList(it)
-
-         }
+        loading.observe(viewLifecycleOwner) {
+            showLoadingDialog(requireContext(), it)
+        }
+        popularMovies.observe(viewLifecycleOwner) {
+            moviePopularAdapter.submitList(it)
+        }
         onShowMovieDetail.observe(viewLifecycleOwner) {
             popularMovieNavigator.openPopularMovie(it)
         }

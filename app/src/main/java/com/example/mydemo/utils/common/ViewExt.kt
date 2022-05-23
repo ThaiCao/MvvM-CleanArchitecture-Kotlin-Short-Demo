@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.annotation.StringRes
 import androidx.core.text.TextUtilsCompat
 import androidx.core.view.ViewCompat
-import java.util.*
+import java.util.Locale
 
 val View.isLayoutRtl
     get() = ViewCompat.getLayoutDirection(this) == ViewCompat.LAYOUT_DIRECTION_RTL
