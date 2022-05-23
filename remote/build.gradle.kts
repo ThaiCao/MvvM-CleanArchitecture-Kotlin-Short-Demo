@@ -32,6 +32,12 @@ dependencies {
     implementation(Network.retrofit)
     implementation(Network.gson)
     implementation(Network.okhttpLoggingInterceptor)
+
+    testImplementation(Test.junit)
+    testImplementation(Test.coroutine)
+    testImplementation(Test.mockk)
+    testImplementation(Test.test_core)
+    testImplementation(project(Test.toolsTest, "testArtifacts"))
 }
 
 android {

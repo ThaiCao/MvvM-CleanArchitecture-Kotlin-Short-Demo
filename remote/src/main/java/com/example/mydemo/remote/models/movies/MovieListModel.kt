@@ -2,13 +2,13 @@ package com.example.mydemo.remote.models.movies
 
 import com.google.gson.annotations.SerializedName
 
-class MovieListModel(
+data class MovieListModel(
 
     @SerializedName("page")
     var page: Int = 0,
 
     @SerializedName("results")
-    var listOfMoviesResponse: MutableList<MovieModel> = mutableListOf(),
+    var listOfMoviesResponse: List<MovieModel> = arrayListOf(),
 
     @SerializedName("total_pages")
     var totalPages: Int = 0,

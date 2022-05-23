@@ -3,6 +3,7 @@ plugins {
     id(Plugins.androidLibrary)
     id(Plugins.kotlinAndroid)
     id(Plugins.kotlinKapt)
+    jacoco
 }
 dependencies {
     implementation(project(Modules.common))
@@ -16,6 +17,12 @@ dependencies {
     implementation(Database.room)
     kapt(Database.roomKapt)
     implementation(Google.gson)
+
+    testImplementation(Test.junit)
+    testImplementation(Test.coroutine)
+    testImplementation(Test.mockk)
+    testImplementation(Test.test_core)
+    testImplementation(project(Test.toolsTest, "testArtifacts"))
 }
 
 android {

@@ -7,7 +7,6 @@ import kotlinx.coroutines.flow.Flow
 
 class MovieRemoteDataStore(
     private val movieRemote: IMovieRemoteStore,
-    private val movieSharedPreference: MovieSharedPreferenceDataStore,
 ) : IMovieDataStore {
     override suspend fun getPopularsMovies(): List<MovieEntity> {
         return movieRemote.getPopularsMovies()
@@ -18,10 +17,10 @@ class MovieRemoteDataStore(
     }
 
     override fun saveMovieExpiredTime(expiredTime: Long) {
-        movieSharedPreference.saveMovieCacheExpiredTime(expiredTime)
+        throw UnsupportedOperationException("save movies expired time action not applicable for remote.")
     }
 
     override fun getMovieExpiredTime(): Long? {
-        return movieSharedPreference.getMovieCacheExpiredTime()
+        throw UnsupportedOperationException("get movies expired time action not applicable for remote.")
     }
 }

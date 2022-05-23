@@ -19,7 +19,6 @@ val repositoryModule = module {
     factory{
         MovieRemoteDataStore(
             movieRemote = get(),
-            movieSharedPreference = get(),
         )
     }
 
