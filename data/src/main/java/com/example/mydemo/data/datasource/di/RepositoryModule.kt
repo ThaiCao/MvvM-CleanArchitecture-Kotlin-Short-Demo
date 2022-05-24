@@ -1,7 +1,7 @@
 package com.example.mydemo.data.datasource.di
 
 import com.example.mydemo.data.datasource.movie.local.db.MovieLocalDataStore
-import com.example.mydemo.data.datasource.movie.remote.MovieRemoteDataStore
+import com.example.mydemo.data.datasource.movie.remote.MovieRemoteDalocaltaStore
 import com.example.mydemo.data.factory.IMovieDataStoreFactory
 import com.example.mydemo.data.factory.MovieDataStoreFactoryImpl
 import com.example.mydemo.data.mapper.movie.MovieMapper
@@ -17,7 +17,7 @@ val repositoryModule = module {
         )
     }
     factory{
-        MovieRemoteDataStore(
+        MovieRemoteDalocaltaStore(
             movieRemote = get(),
         )
     }

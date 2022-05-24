@@ -3,13 +3,18 @@ package com.example.mydemo.data.datasource.movie.remote
 import com.example.mydemo.data.datasource.movie.IMovieDataStore
 import com.example.mydemo.data.datasource.movie.local.sharedpreference.MovieSharedPreferenceDataStore
 import com.example.mydemo.data.models.MovieEntity
+import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.flow.Flow
 
-class MovieRemoteDataStore(
+class MovieRemoteDalocaltaStore(
     private val movieRemote: IMovieRemoteStore,
 ) : IMovieDataStore {
     override suspend fun getPopularsMovies(): List<MovieEntity> {
         return movieRemote.getPopularsMovies()
+    }
+
+    override suspend fun getPopularsMoviesWithCache(): List<MovieEntity> {
+        return movieRemote.getPopularsMoviesAsync()
     }
 
     override suspend fun saveMovies(listMovies: List<MovieEntity>) {

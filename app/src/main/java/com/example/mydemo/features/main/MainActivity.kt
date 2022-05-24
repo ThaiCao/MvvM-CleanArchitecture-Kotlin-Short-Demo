@@ -19,7 +19,7 @@ class MainActivity : BaseActivity(R.layout.activity_main) {
     private val popularMovieNavigator: PopularMovieNavigator by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        WindowCompat.setDecorFitsSystemWindows(window, false)
+//        WindowCompat.setDecorFitsSystemWindows(window, false)
         super.onCreate(savedInstanceState)
 //        setSupportActionBar(binding.toolbar)
         setupNavigator()

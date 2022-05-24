@@ -37,6 +37,7 @@ class PopularMovieFragment : BaseFragment(R.layout.fragment_popular_movie) {
         bindView()
         observer()
         viewModel.fetchPopularMovies()
+//        viewModel.fetchPopularMoviesWithCache()
     }
 
     private fun bindView() = with(binding) {
@@ -56,6 +57,10 @@ class PopularMovieFragment : BaseFragment(R.layout.fragment_popular_movie) {
         }
         onNotFoundMovieError.observe(viewLifecycleOwner) {
             showError(getString(R.string.error_movie_not_found))
+        }
+        listPopularMovieWithCache.observe(viewLifecycleOwner) {
+            android.util.Log.e("TEST_DATA","listPopularMovieWithCache= $it")
+            moviePopularAdapter.submitList(it)
         }
     }
 }

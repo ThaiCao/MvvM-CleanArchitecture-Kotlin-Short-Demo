@@ -1,6 +1,7 @@
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    id(Plugins.androidLibrary)
+    id(Plugins.kotlinAndroid)
+    id(Plugins.kotlinKapt)
 }
 
 android {
@@ -40,6 +41,9 @@ dependencies {
     implementation(Di.core)
     implementation(Coroutines.core)
     implementation(Coroutines.coroutines)
+
+    implementation(AndroidX.viewModel)
+    implementation(AndroidX.liveData)
 
     testImplementation(Test.junit)
     testImplementation(Test.coroutine)

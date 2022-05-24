@@ -8,7 +8,7 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 
 val viewModelModule = module {
     viewModel {
-        PopularMovieViewModel(get(), get())
+        PopularMovieViewModel(get(), get(), get())
     }
 
     viewModel {

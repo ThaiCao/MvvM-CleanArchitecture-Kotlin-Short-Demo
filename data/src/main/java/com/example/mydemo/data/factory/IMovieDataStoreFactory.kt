@@ -5,6 +5,7 @@ import com.example.mydemo.data.datasource.movie.local.sharedpreference.MovieShar
 
 interface IMovieDataStoreFactory {
     suspend fun getDataStore(): IMovieDataStore
-    suspend fun getLocalDataStore(): IMovieDataStore
+    fun getLocalDataStore(): IMovieDataStore
+    fun getRemoteDataStore(): IMovieDataStore
     suspend fun getMovieSharedPreferenceDataStore(): MovieSharedPreferenceDataStore
 }
