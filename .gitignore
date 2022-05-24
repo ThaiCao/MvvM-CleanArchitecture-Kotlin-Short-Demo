@@ -26,6 +26,9 @@
 *.rar
 **/.gradle/
 **/build/
+# Build Src
+/buildSrc/.gradle/
+/buildSrc/build/
 
 *.bin
 *.lock
