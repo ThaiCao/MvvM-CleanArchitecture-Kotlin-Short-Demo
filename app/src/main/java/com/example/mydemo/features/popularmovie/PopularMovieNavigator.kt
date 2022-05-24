@@ -21,7 +21,7 @@ class PopularMovieNavigatorImpl : BaseNavigatorImpl(), PopularMovieNavigator {
                     movie = movie
                 ).toBundle()
             },
-            navOptions = { navOptionsBottomToTop(withAnim = true) }
+//            navOptions = { navOptionsBottomToTop(withAnim = false) }
         )
     }
 }
