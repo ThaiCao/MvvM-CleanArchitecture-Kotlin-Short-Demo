@@ -24,8 +24,8 @@
 *.zip
 *.tar.gz
 *.rar
-/buildSrc/.gradle/
-/buildSrc/build/
+**/.gradle/
+**/build/
 
 *.bin
 *.lock
