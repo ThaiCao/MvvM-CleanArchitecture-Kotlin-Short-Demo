@@ -1,7 +1,6 @@
 package com.example.mydemo.features.main
 
 import android.os.Bundle
-import androidx.core.view.WindowCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.mydemo.R

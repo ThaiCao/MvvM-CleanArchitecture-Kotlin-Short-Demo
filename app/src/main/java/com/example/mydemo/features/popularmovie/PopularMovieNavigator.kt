@@ -2,7 +2,6 @@ package com.example.mydemo.features.popularmovie
 
 import com.example.mydemo.presentation.models.movie.IMovieItemUi.MoviePresentation
 import com.example.mydemo.R
-import com.example.mydemo.utils.common.navOptionsBottomToTop
 import com.example.mydemo.utils.common.safeNavigate
 import com.example.mydemo.base.navigator.BaseNavigator
 import com.example.mydemo.base.navigator.BaseNavigatorImpl
