@@ -44,7 +44,10 @@ dependencies {
     implementation(Coroutines.coroutines)
     implementation(AndroidX.viewModel)
     implementation(AndroidX.liveData)
+    implementation(AndroidX.runTime)
+    implementation(UnitFlow.unitFlow)
 
+    testImplementation(Test.unitFlow)
     testImplementation(Test.junit)
     testImplementation(Test.coroutine)
     testImplementation(Test.mockk)

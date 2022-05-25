@@ -36,6 +36,7 @@ object AndroidX {
     const val roomKapt = "androidx.room:room-compiler:${Versions.room}"
     const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
     const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
+    const val runTime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
     const val fragmentKtx = "androidx.fragment:fragment-ktx:${Versions.fragmentKtx}"
     const val recyclerview = "androidx.recyclerview:recyclerview:${Versions.recyclerview}"
     const val securityCrypto = "androidx.security:security-crypto:${Versions.securityCrypto}"
@@ -84,6 +85,11 @@ object Test {
     const val mockk = "io.mockk:mockk:${Versions.mockk}"
     const val toolsTest = ":tooltest"
     const val robolectric = "org.robolectric:robolectric:${Versions.robolectric}"
+    const val unitFlow = "io.uniflow:uniflow-androidx-test:${Versions.unitFlow}"
+}
+
+object UnitFlow {
+    const val unitFlow = "io.uniflow:uniflow-androidx:${Versions.unitFlow}"
 }
 
 object Modules {

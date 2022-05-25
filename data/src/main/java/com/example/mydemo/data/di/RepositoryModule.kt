@@ -1,4 +1,4 @@
-package com.example.mydemo.data.datasource.di
+package com.example.mydemo.data.di
 
 import com.example.mydemo.data.datasource.movie.local.db.MovieLocalDataStore
 import com.example.mydemo.data.datasource.movie.remote.MovieRemoteDalocaltaStore

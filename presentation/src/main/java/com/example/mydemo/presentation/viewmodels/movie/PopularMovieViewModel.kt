@@ -11,8 +11,11 @@ import com.example.mydemo.presentation.base.BaseViewModel
 import com.example.mydemo.presentation.mapper.movie.MoviePresentationMapper
 import com.example.mydemo.presentation.models.movie.IMovieItemUi
 import com.example.mydemo.presentation.models.movie.IMovieItemUi.MoviePresentation
+import com.example.mydemo.presentation.stateui.movie.MovieDetailUiState
+import com.example.mydemo.presentation.stateui.movie.MovieUiState
 import com.example.mydemo.presentation.utils.SingleLiveEvent
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.launch
@@ -24,9 +27,14 @@ class PopularMovieViewModel(
     private val mapper: MoviePresentationMapper
 ) : BaseViewModel(){
     val popularMovies = SingleLiveEvent<List<MoviePresentation>>()
+
     val onShowMovieDetail = SingleLiveEvent<MoviePresentation>()
     val onNotFoundMovieError = SingleLiveEvent<Unit>()
     var listPopularMovieWithCache = SingleLiveEvent<List<MoviePresentation>>()
+
+    // state flow
+    var movieUiState: MutableStateFlow<MovieUiState> = MutableStateFlow(MovieUiState.Success(emptyList()))
+    var movieDetailUiState: MutableStateFlow<MovieDetailUiState> = MutableStateFlow(MovieDetailUiState.InitUiState(true))
 
     fun fetchPopularMovies(){
         viewModelScope.launch {
@@ -43,15 +51,41 @@ class PopularMovieViewModel(
         }
     }
 
-    fun onClickMenuItem(movieItemUi: IMovieItemUi) {
-        viewModelScope.launch(Dispatchers.Main.immediate) {
-            val movieItem = popularMovies.value?.find { it.id == (movieItemUi as? MoviePresentation)?.id }
-            movieItem?.let{
-                onShowMovieDetail.value = it
-      }?.run{
-                onNotFoundMovieError.call()
-            }
+    fun fetchPopularMoviesUiState(){
+        viewModelScope.launch {
+            movieUiState.value = MovieUiState.Loading(isLoading = true)
+            getMoviePopular(IFlowUseCase.None())
+                .flowOn(Dispatchers.IO)
+                .catch{
+                    it.printStackTrace()
+                    movieUiState.value = MovieUiState.Loading(isLoading = false)
+                }.collect {
+                    movieUiState.value = MovieUiState.Success(moviePresentationList = it.map{mapper.mapToPresentation(it)})
+                    movieUiState.value = MovieUiState.Loading(isLoading = false)
+                }
         }
+    }
+
+    fun onStopLoading(){
+        movieUiState.value = MovieUiState.Loading(isLoading = false)
+    }
+
+    fun onClickMenuItem(movieItemUi: IMovieItemUi) {
+        if(movieItemUi is MoviePresentation){
+            onShowMovieDetail.value = movieItemUi
+        }else{
+            onNotFoundMovieError.call()
+        }
+    }
+
+    fun onClickMenuItemUiState(movieItemUi: IMovieItemUi) {
+
+        movieDetailUiState.value = if(movieItemUi is MoviePresentation){
+            MovieDetailUiState.Success(movieItemUi)
+        }else{
+            MovieDetailUiState.Error("Movie is not available")
+        }
+        movieDetailUiState.value = MovieDetailUiState.InitUiState(false)
     }
 
     fun fetchPopularMoviesWithCache() = viewModelScope.launch(Dispatchers.Main) {
@@ -62,7 +96,6 @@ class PopularMovieViewModel(
         }
         try {
             listPopularMovieWithCache.addSource(movieWithCacheResponseSource) {
-                android.util.Log.e("TEST_DATA","fetchPopularMoviesWithCache= ${it.data}")
                 it.data?.let {
                     listPopularMovieWithCache.value = it.map{mapper.mapToPresentation(it)}
                 }

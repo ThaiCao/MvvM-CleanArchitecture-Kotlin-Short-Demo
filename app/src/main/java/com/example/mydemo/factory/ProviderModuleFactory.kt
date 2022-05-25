@@ -1,6 +1,6 @@
 package com.example.mydemo.factory
 
-import com.example.mydemo.data.datasource.di.repositoryModule
+import com.example.mydemo.data.di.repositoryModule
 import com.example.mydemo.di.appModule
 import com.example.mydemo.di.navigatorModule
 import com.example.mydemo.domain.di.useCaseModule

@@ -27,4 +27,5 @@ object Versions {
     const val mockk = "1.11.0"
     const val robolectric = "4.5.1"
     const val pinterestKtlint = "0.40.0"
+    const val unitFlow = "0.13.0-alpha-2"
 }
