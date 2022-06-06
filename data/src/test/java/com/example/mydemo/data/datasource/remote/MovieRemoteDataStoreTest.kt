@@ -2,7 +2,7 @@ package com.example.mydemo.data.datasource.remote
 
 import com.example.mydemo.data.base.DataTest
 import com.example.mydemo.data.datasource.movie.remote.IMovieRemoteStore
-import com.example.mydemo.data.datasource.movie.remote.MovieRemoteDalocaltaStore
+import com.example.mydemo.data.datasource.movie.remote.MovieRemoteDataStore
 import com.example.mydemo.data.models.MovieEntity
 import com.example.mydemo.tooltest.autoWire
 import com.example.mydemo.tooltest.mock
@@ -15,7 +15,7 @@ import org.junit.Test
 
 class MovieRemoteDataStoreTest : DataTest(){
     private val movieRemote: IMovieRemoteStore = mock()
-    private val remoteDataStore: MovieRemoteDalocaltaStore = autoWire()
+    private val remoteDataStore: MovieRemoteDataStore = autoWire()
 
     @Test
     fun `get movie success`() = runBlockingTest {

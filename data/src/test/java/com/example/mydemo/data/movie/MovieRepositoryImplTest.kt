@@ -3,7 +3,7 @@ package com.example.mydemo.data.movie
 import com.example.mydemo.data.base.DataTest
 import com.example.mydemo.data.datasource.movie.local.db.MovieLocalDataStore
 import com.example.mydemo.data.datasource.movie.local.sharedpreference.MovieSharedPreferenceDataStore
-import com.example.mydemo.data.datasource.movie.remote.MovieRemoteDalocaltaStore
+import com.example.mydemo.data.datasource.movie.remote.MovieRemoteDataStore
 import com.example.mydemo.data.factory.IMovieDataStoreFactory
 import com.example.mydemo.data.mapper.movie.MovieMapper
 import com.example.mydemo.data.models.MovieEntity
@@ -21,7 +21,7 @@ class MovieRepositoryImplTest : DataTest() {
 
     private val movieMapper: MovieMapper = mock()
     private val movieDataStoreFactory: IMovieDataStoreFactory = mock()
-    private val movieRemoteDataStore: MovieRemoteDalocaltaStore = mock()
+    private val movieRemoteDataStore: MovieRemoteDataStore = mock()
     private val movieLocalDataStore: MovieLocalDataStore = mock()
     private val movieSharedPreferenceDataStore: MovieSharedPreferenceDataStore = mock()
     private val repo: MovieRepositoryImpl = autoWire()

@@ -6,7 +6,7 @@ import com.example.mydemo.data.models.MovieEntity
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.flow.Flow
 
-class MovieRemoteDalocaltaStore(
+class MovieRemoteDataStore(
     private val movieRemote: IMovieRemoteStore,
 ) : IMovieDataStore {
     override suspend fun getPopularsMovies(): List<MovieEntity> {

@@ -13,3 +13,17 @@ fun showLoadingDialog(context: Context, isShowLoading: Boolean) {
         null
     }
 }
+
+fun showLoadingDialog(context: Context) {
+    loadingDialog = if (!loadingDialog?.isShowing.safe(false)) {
+        CustomLoadingDialog(context = context).also { it.showDialog() }
+    } else {
+        loadingDialog?.hideDialog()
+        null
+    }
+}
+
+fun hideLoadingDialog() {
+    loadingDialog?.hideDialog()
+    loadingDialog = null
+}

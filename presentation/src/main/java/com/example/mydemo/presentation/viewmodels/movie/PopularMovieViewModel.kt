@@ -53,21 +53,21 @@ class PopularMovieViewModel(
 
     fun fetchPopularMoviesUiState(){
         viewModelScope.launch {
-            movieUiState.value = MovieUiState.Loading(isLoading = true)
+            movieUiState.value = MovieUiState.LoadingShow
             getMoviePopular(IFlowUseCase.None())
                 .flowOn(Dispatchers.IO)
                 .catch{
                     it.printStackTrace()
-                    movieUiState.value = MovieUiState.Loading(isLoading = false)
+                    movieUiState.value = MovieUiState.LoadingHide
                 }.collect {
                     movieUiState.value = MovieUiState.Success(moviePresentationList = it.map{mapper.mapToPresentation(it)})
-                    movieUiState.value = MovieUiState.Loading(isLoading = false)
+                    movieUiState.value = MovieUiState.LoadingHide
                 }
         }
     }
 
     fun onStopLoading(){
-        movieUiState.value = MovieUiState.Loading(isLoading = false)
+        movieUiState.value = MovieUiState.LoadingHide
     }
 
     fun onClickMenuItem(movieItemUi: IMovieItemUi) {

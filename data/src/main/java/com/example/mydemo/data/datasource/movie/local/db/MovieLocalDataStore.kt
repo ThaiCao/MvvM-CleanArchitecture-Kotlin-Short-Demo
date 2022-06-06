@@ -28,4 +28,8 @@ class MovieLocalDataStore(
     override fun getMovieExpiredTime(): Long? {
         return movieSharedPreference.getMovieCacheExpiredTime()
     }
+
+    suspend fun isCached(): Boolean {
+        return movieLocal.isCached()
+    }
 }

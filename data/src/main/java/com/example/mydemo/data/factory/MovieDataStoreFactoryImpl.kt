@@ -4,13 +4,13 @@ import com.example.mydemo.data.datasource.movie.IMovieDataStore
 import com.example.mydemo.data.datasource.movie.local.db.IMovieLocalStore
 import com.example.mydemo.data.datasource.movie.local.db.MovieLocalDataStore
 import com.example.mydemo.data.datasource.movie.local.sharedpreference.MovieSharedPreferenceDataStore
-import com.example.mydemo.data.datasource.movie.remote.MovieRemoteDalocaltaStore
+import com.example.mydemo.data.datasource.movie.remote.MovieRemoteDataStore
 
 class MovieDataStoreFactoryImpl(
     private val movieLocal: IMovieLocalStore,
     private val movieSharedPreference: MovieSharedPreferenceDataStore,
     private val movieLocalDataStore: MovieLocalDataStore,
-    private val movieRemoteDataStore: MovieRemoteDalocaltaStore,
+    private val movieRemoteDataStore: MovieRemoteDataStore,
     ) : IMovieDataStoreFactory {
 
     override suspend fun getDataStore(): IMovieDataStore {

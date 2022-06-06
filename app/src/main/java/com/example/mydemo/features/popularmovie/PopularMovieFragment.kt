@@ -15,10 +15,7 @@ import com.example.mydemo.features.popularmovie.viewholder.MovieItemViewHolderFa
 import com.example.mydemo.presentation.stateui.movie.MovieDetailUiState
 import com.example.mydemo.presentation.stateui.movie.MovieUiState
 import com.example.mydemo.presentation.viewmodels.movie.PopularMovieViewModel
-import com.example.mydemo.utils.common.showError
-import com.example.mydemo.utils.common.showLoadingDialog
-import com.example.mydemo.utils.common.toPx
-import com.example.mydemo.utils.common.viewBinding
+import com.example.mydemo.utils.common.*
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -98,9 +95,12 @@ class PopularMovieFragment : BaseFragment(R.layout.fragment_popular_movie) {
                 viewModel.movieUiState.collect { uiState ->
                     // New value received
                     when (uiState) {
-                        is MovieUiState.Success -> moviePopularAdapter.submitList(uiState.moviePresentationList)
+                        is MovieUiState.Success -> {
+                            moviePopularAdapter.submitList(uiState.moviePresentationList)
+                        }
                         is MovieUiState.Error -> showError(uiState.exception.toString())
-                        is MovieUiState.Loading -> showLoadingDialog(requireContext(), uiState.isLoading)
+                        is MovieUiState.LoadingShow -> showLoadingDialog(requireContext())
+                        is MovieUiState.LoadingHide -> hideLoadingDialog()
                     }
                 }
             }
