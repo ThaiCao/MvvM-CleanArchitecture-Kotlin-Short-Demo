@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+    <ManuallySuppressedIssues />
+  <CurrentIssues>
+    <ID>NoMultipleSpaces:com.example.structure.di.AppModule.kt:5</ID>
+    <ID>NoUnusedImports:com.example.structure.feature.main.MainActivity.kt:4</ID>
+    <ID>NoUnusedImports:com.example.structure.feature.main.MainActivity.kt:5</ID>
+  </CurrentIssues>
+</SmellBaseline>
