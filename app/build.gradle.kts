@@ -12,9 +12,9 @@ plugins {
     id(Plugins.detektPlugin)
     id(Plugins.kotlin_parcelize)
     id(Plugins.kotlinKapt)
-    id(Plugins.google_service)
-    id(Plugins.crashlytics)
-    id(Plugins.firebase_pref)
+//    id(Plugins.google_service)
+//    id(Plugins.crashlytics)
+//    id(Plugins.firebase_pref)
     jacoco
 }
 
@@ -246,9 +246,6 @@ dependencies {
     implementation(AndroidX.viewModel)
     implementation(AndroidX.java8)
     implementation(AndroidX.liveData)
-    implementation(AndroidX.viewModel)
-    implementation(AndroidX.java8)
-    implementation(AndroidX.liveData)
     implementation(AndroidX.fragment_ktx)
     implementation(AndroidX.refreshLayout)
     implementation(AndroidX.security_crypto)
@@ -265,9 +262,6 @@ dependencies {
     implementation(Shimmer.shimmer)
 
     implementation(Google.gson)
-
-    implementation(Image.glide)
-    kapt(Image.glideCompiler)
 
     implementation(AndroidX.browser)
 

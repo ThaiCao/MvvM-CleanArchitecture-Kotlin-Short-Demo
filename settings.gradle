@@ -14,3 +14,17 @@ dependencyResolutionManagement {
 }
 rootProject.name = "DemoStructure"
 include ':app'
+include ':common'
+include ':data'
+include ':presentation'
+include ':testing'
+include ':language'
+include ':uibase'
+include ':uicommon'
+include ':deeplink'
+include ':uiwidget'
+include ':network'
+include ':navigator'
+include ':di'
+include ':mapper'
+include ':domain'

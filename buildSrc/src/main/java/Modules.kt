@@ -4,5 +4,6 @@ object Modules {
     const val domain = ":domain"
     const val common = ":common"
     const val presentation = ":presentation"
-    const val tools_test = ":tools-test"
+    const val testing = ":testing"
+    const val deeplink = ":deeplink"
 }

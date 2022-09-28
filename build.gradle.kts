@@ -16,9 +16,10 @@ buildscript {
         classpath(ClassPaths.kotlin_gradle_plugin)
         classpath(ClassPaths.detekt_gradle_plugin)
         classpath(ClassPaths.jacoco_gradle_plugin)
-        classpath(ClassPaths.firebase_pref)
-        classpath(ClassPaths.google_service)
-        classpath(ClassPaths.firebase_crashlytics_gradle)
+//        classpath(ClassPaths.firebase_pref)
+//        classpath(ClassPaths.google_service)
+//        classpath(ClassPaths.firebase_crashlytics_gradle)
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10")
     }
 }
 
