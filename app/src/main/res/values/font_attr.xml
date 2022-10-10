@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="fontTitleBold" format="reference" />
+    <attr name="fontTitleHeader" format="reference" />
+    <attr name="fontTitleSemiBold" format="reference" />
+    <attr name="fontButton" format="reference" />
+    <attr name="fontParagraphRegular" format="reference" />
+    <attr name="fontParagraphSemiBold" format="reference" />
+    <attr name="fontParagraphLarge" format="reference" />
+</resources>

@@ -6,4 +6,7 @@ object Modules {
     const val presentation = ":presentation"
     const val testing = ":testing"
     const val deeplink = ":deeplink"
+    const val uicommon = ":uicommon"
+    const val uibase = ":uibase"
+    const val uiwidget = ":uiwidget"
 }

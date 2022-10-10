@@ -1,16 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.App.Starting.Light" parent="Theme.SplashScreen.IconBackground">
+        <item name="postSplashScreenTheme">@style/LightTheme</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_banner</item>
+    </style>
+
     <!-- Base application theme. -->
-    <style name="Theme.DemoStructure" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+    <style name="BaseTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/core3</item>
+        <item name="colorOnPrimary">@color/core2</item>
+        <item name="colorPrimaryContainer">@color/extra1</item>
+        <item name="colorOnPrimaryContainer">@color/core3</item>
+        <item name="colorPrimaryContainerInverse">@color/core3</item>
+        <item name="colorOnPrimaryContainerInverse">@color/extra1</item>
+
+        <item name="colorSecondary">@color/greyLighter4</item>
+        <item name="colorOnSecondary">@color/core2</item>
+        <item name="colorSecondaryContainer">@color/core3</item>
+        <item name="colorOnSecondaryContainer">@color/core2</item>
+        <item name="colorSecondaryContainerInverse">@color/extra1</item>
+        <item name="colorOnSecondaryContainerInverse">@color/core3</item>
+
+        <item name="colorWarning">@color/infoBg</item>
+        <item name="colorOnWarning">@color/core2</item>
+        <item name="colorWarningInverse">@color/greyLighter4</item>
+        <item name="colorOnWarningInverse">@color/core2</item>
+
+        <item name="colorSuspend">@color/greyLighter2</item>
+        <item name="colorOnSuspend">@color/core3</item>
+        <item name="colorSuspendContainer">@color/greyLighter1</item>
+        <item name="colorOnSuspendContainer">@color/core3</item>
+
+        <item name="colorSurface">@color/core3</item>
+        <item name="colorOnSurface">@color/core2</item>
+        <item name="colorSurfaceContainer">@color/extra1</item>
+        <item name="colorOnSurfaceContainer">@color/core3</item>
+        <item name="colorSurfaceContainerInverse">@color/core3</item>
+        <item name="colorOnSurfaceContainerInverse">@color/extra1</item>
+
+        <item name="colorContainer">@color/greyLighter3</item>
+        <item name="colorOnContainer">@color/grey</item>
+
+        <item name="colorLink">@color/extra1</item>
+        <item name="colorError">@color/core1</item>
+        <item name="colorOnError">@color/core3</item>
+        <item name="colorDivider">@color/greyLighter4</item>
+
+        <item name="colorAccent">@color/extra1</item>
+        <item name="themeColorAccent">@color/extra1</item>
+        <item name="colorOnSnackBar">@color/supporting1</item>
+        <item name="colorAnchor">@color/greyLighter1</item>
+        <item name="colorToast">@color/modalBg</item>
+
+        <item name="colorPrimaryDark">?colorOnPrimary</item>
+        <item name="android:textColorPrimary">?colorOnPrimary</item>
+        <item name="android:windowBackground">?colorPrimary</item>
+        <item name="android:navigationBarColor">?colorPrimary</item>
+        <item name="android:statusBarColor">?colorPrimary</item>
+
+
+        <item name="colorTertiary">@color/core1</item>
+
+        <item name="dialogTheme">@style/LightTheme</item>
+
+        <!-- Notification -->
+        <item name="themeNotificationAlertBackgroundColor">@color/alertBg</item>
+        <item name="themeNotificationInfoBackgroundColor">@color/infoBg</item>
+        <item name="themeNotificationSuccessBackgroundColor">@color/successBg</item>
+        <item name="themeNotificationInfoIconColor">@color/supporting5</item>
+
+        <item name="fontTitleBold">@font/sharp_sans_bold</item>
+        <item name="fontTitleHeader">@font/sharp_sans_bold</item>
+        <item name="fontTitleSemiBold">@font/sharp_sans_semi_bold</item>
+        <item name="fontButton">@font/open_sans_semi_bold</item>
+        <item name="fontParagraphRegular">@font/open_sans_regular</item>
+        <item name="fontParagraphSemiBold">@font/open_sans_semi_bold</item>
+        <item name="fontParagraphLarge">@font/open_sans_regular</item>
+
+        <!-- Checkbox -->
+        <item name="themeColorCheckbox">@color/greyLighter1</item>
+        <item name="themeColorCheckboxFocused">@color/grey</item>
+        <!-- RadioBtn -->
+        <item name="themeColorRadioBtn">@color/greyLighter1</item>
+        <item name="themeColorRadioBtnFocused">@color/grey</item>
+        <!-- Switch -->
+        <item name="themeColorSwitchTrackChecked">?colorAccent</item>
+        <item name="themeColorSwitchTrackUnchecked">@color/greyLighter1</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/checkbox_selector</item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/radio_btn_selector</item>
+
+        <!-- Button -->
+        <item name="colorContainerOverDown">@color/extra2</item>
+
+        <!-- Form fields -->
+        <item name="themeFieldLabelColor">@color/grey</item>
+        <item name="themeTextFieldColorHint">@color/grey</item>
+        <item name="themeTextFieldColor">@color/core2</item>
+        <item name="themeTextFieldColorUnready">@color/grey</item>
+        <item name="themeBackgroundTextField">@color/core3</item>
+        <item name="themeBackgroundTextFieldUnready">@color/greyLighter4</item>
+        <item name="themeBackgroundTextFieldBorderUnready">@color/grey</item>
+        <item name="themeBackgroundTextFieldFocused">@color/grey</item>
+        <item name="themeBackgroundTextFieldUnFocused">@color/greyLighter2</item>
+        <item name="themeBackgroundTextFieldProgress">@color/extra1</item>
+        <item name="themeTextFieldError">@color/core1</item>
+
+        <!-- Dropdown fields -->
+        <item name="themeDropdownFieldLabelColor">@color/grey</item>
+        <item name="themeDropdownFieldColorHint">@color/grey</item>
+        <item name="themeDropdownFieldColor">@color/core2</item>
+        <item name="themeBackgroundDropdownField">@color/greyLighter2</item>
+        <item name="themeBackgroundDropdownFieldFocused">@color/grey</item>
+        <item name="themeDropdownFieldError">@color/core1</item>
+
+        <!-- Quantity box -->
+        <item name="themeColorQuantity">@color/extra1</item>
+        <item name="themeColorQuantityDisabled">@color/greyLighter1</item>
+        <item name="themeColorQuantityPressed">@color/extra2</item>
+        <item name="themeBackgroundQuantityBox">@color/greyLighter4</item>
+        <item name="themeTextColorQuantity">@color/extra1</item>
+
+        <!-- Tab -->
+        <item name="tabSelectedTextColor">@color/core2</item>
+        <item name="tabTextColor">@color/grey</item>
+        <item name="themeMenuNavSelectedColor">@color/core1</item>
+        <item name="themeMenuNavTextColor">@color/core2</item>
+        <item name="themeMenuNavTextSelectedColor">@color/core3</item>
+
+        <!--RecyclerView -->
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="BaseTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="LightTheme" parent="BaseTheme" />
+
+    <style name="LightTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="LightTheme.Toolbar">
+        <!-- Enable these below if you want clicking icons to trigger a ripple effect -->
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackground</item>
+    </style>
+
+    <style name="LoadingTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="BaseThemeBottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="colorError">@color/core1</item>
+    </style>
+
+    <style name="FullScreenDialogTheme" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="colorAccent">@color/extra1</item>
+        <item name="android:windowBackground">?colorOnPrimary</item>
+        <item name="android:statusBarColor">?colorOnPrimary</item>
+        <item name="android:navigationBarColor">?colorOnPrimary</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="colorOnError">@color/core3</item>
+        <item name="colorPrimary">@color/core3</item>
+        <item name="colorOnPrimary">@color/core2</item>
     </style>
 </resources>

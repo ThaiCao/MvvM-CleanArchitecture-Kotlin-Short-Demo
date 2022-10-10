@@ -27,6 +27,7 @@ object AndroidX {
     const val recyclerview = "androidx.recyclerview:recyclerview:${Versions.recyclerview}"
     const val security_crypto = "androidx.security:security-crypto:${Versions.security_crypto}"
     const val browser = "androidx.browser:browser:${Versions.browser}"
+    const val splash = "androidx.core:core-splashscreen:${Versions.splashscreen}"
 }
 
 object Di {

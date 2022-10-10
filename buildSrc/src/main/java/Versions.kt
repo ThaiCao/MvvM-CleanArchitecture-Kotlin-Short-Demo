@@ -36,4 +36,5 @@ object Versions {
     const val firebase_perf = "1.4.1"
     const val google_services = "4.3.10"
     const val firebase_crashlytics = "2.8.1"
+    const val splashscreen = "1.0.0"
 }
