@@ -229,6 +229,7 @@ dependencies {
     implementation(project(Modules.domain))
     implementation(project(Modules.presentation))
     implementation(project(Modules.common))
+    implementation(project(Modules.uibase))
 
     implementation(Di.core)
     implementation(Di.koin)
@@ -264,6 +265,9 @@ dependencies {
     implementation(Google.gson)
 
     implementation(AndroidX.browser)
+    implementation(AndroidX.splash)
+
+    implementation("androidx.databinding:viewbinding:7.1.2")
 
     testImplementation(Test.junit)
     testImplementation(Test.coroutine)

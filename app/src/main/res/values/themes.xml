@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Theme.App.Starting.Light" parent="Theme.SplashScreen.IconBackground">
+   <!-- <style name="Theme.App.Starting.Light" parent="Theme.SplashScreen.IconBackground">
         <item name="postSplashScreenTheme">@style/LightTheme</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_banner</item>
-    </style>
+    </style>-->
 
     <!-- Base application theme. -->
     <style name="BaseTheme" parent="Theme.MaterialComponents.Light.NoActionBar">

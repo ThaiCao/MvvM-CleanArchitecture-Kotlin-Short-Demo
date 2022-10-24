@@ -43,7 +43,10 @@ interface LocalizationActivityDelegateOwner {
     val localizationDelegate: LocalizationActivityDelegate
 }
 
-open class LocalizationActivityDelegateImpl(private val activity: Activity) :
+open class LocalizationActivityDelegateImpl(
+    private val activity: Activity,
+    private val target: Class<*>
+) :
     LocalizationActivityDelegate {
     private var isLocalizationChanged = false
     private lateinit var currentLanguage: Locale
@@ -184,7 +187,7 @@ open class LocalizationActivityDelegateImpl(private val activity: Activity) :
         sendOnBeforeLocaleChangedEvent()
 
         if (isRestartApp) {
-            val intent = Intent(activity, MainActivity::class.java)
+            val intent = Intent(activity, target)
             val restartIntent = Intent.makeRestartActivityTask(intent.component)
             activity.startActivity(restartIntent)
             exitProcess(0)

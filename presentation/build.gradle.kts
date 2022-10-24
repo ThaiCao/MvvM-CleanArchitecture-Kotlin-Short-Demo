@@ -1,6 +1,10 @@
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+//    id("com.android.library")
+//    id("org.jetbrains.kotlin.android")
+    id(Plugins.androidLibrary)
+    id(Plugins.kotlinAndroid)
+    id(Plugins.kotlin_parcelize)
+    id(Plugins.kotlinKapt)
 }
 
 android {
@@ -33,7 +37,11 @@ android {
 }
 
 dependencies {
+    implementation(Timber.timber)
+    implementation(Timber.timberkt)
 
+    implementation(Image.glide)
+    kapt(Image.glideCompiler)
     implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.appcompat:appcompat:1.5.0")
     implementation("com.google.android.material:material:1.6.1")

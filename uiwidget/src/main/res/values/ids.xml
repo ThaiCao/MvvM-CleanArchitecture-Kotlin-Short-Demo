@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <item name="Paragraph.Small.OnSurface" type="style" />
-    <item name="colorLink" type="attr" />
-    <item name="colorAnchor" type="attr" />
-    <item name="ic_nested_green_circle" type="drawable" />
-    <item name="ic_green_check_thin_mark" type="drawable" />
-    <item name="ic_grey_circle" type="drawable" />
-</resources>
