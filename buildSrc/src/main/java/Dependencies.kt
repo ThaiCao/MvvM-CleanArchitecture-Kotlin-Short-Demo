@@ -33,6 +33,7 @@ object AndroidX {
 object Di {
     const val core = "io.insert-koin:koin-core:${Versions.koin}"
     const val koin = "io.insert-koin:koin-android:${Versions.koin}"
+//    const val viewmodel = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
 }
 
 object Coroutines {
@@ -58,6 +59,7 @@ object Shimmer {
 
 object Image {
     const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+    const val glideOkhttp = "com.github.bumptech.glide:okhttp3-integration:${Versions.glide}"
     const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide}"
 }
 

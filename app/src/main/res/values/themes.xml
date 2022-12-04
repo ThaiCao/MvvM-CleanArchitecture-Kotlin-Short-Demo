@@ -8,6 +8,7 @@
 
     <!-- Base application theme. -->
     <style name="BaseTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+<!--    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
         <item name="colorPrimary">@color/core3</item>
         <item name="colorOnPrimary">@color/core2</item>
         <item name="colorPrimaryContainer">@color/extra1</item>

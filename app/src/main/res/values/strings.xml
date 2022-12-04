@@ -1,10 +1,16 @@
 <resources>
-    <string name="app_name" translatable="false">DemoStructure</string>
-    <string name="dialog_tittle" translatable="false">@string/app_name</string>
-    <string name="dialog_message" translatable="false">Are you sure you want to continue?</string>
-    <string name="yes" translatable="false">Yes</string>
-    <string name="no" translatable="false">No</string>
+    <string name="app_name">DemoStructure</string>
+    <string name="dialog_tittle">@string/app_name</string>
+    <string name="dialog_message">Are you sure you want to continue?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
     <string name="oops">Oops</string>
     <string name="error_general_error_message">Sorry, something went wrong. Please try again later.</string>
     <string name="ok">OK</string>
+    <string name="home_menu">Menu</string>
+    <string name="home_new">New</string>
+    <string name="home_hot">Hot</string>
+    <string name="view_more">View more</string>
+    <string name="text_loading">Loading…</string>
+    <string name="splash_fragment_label">Splash Fragment</string>
 </resources>

@@ -8,3 +8,11 @@ object ConfigData {
     const val versionName = "1.0"
     const val dimension = "environment"
 }
+
+fun getVersionCode(): Int {
+    return ConfigData.versionCode
+}
+
+fun getVersionName(): String {
+    return ConfigData.versionName
+}

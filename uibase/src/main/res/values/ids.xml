@@ -59,4 +59,7 @@
     <item name="error_general_error_message" type="string" />
     <item name="oops" type="string" />
     <item name="ok" type="string" />
+
+    <item name="DialogLeftToRightAnimation" type="style" />
+    <item name="FullScreenDialogTheme" type="style" />
 </resources>

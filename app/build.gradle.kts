@@ -86,8 +86,10 @@ android {
         buildConfigBoolean("LOGGING", true)
         buildConfigString("APP_NAME", "\"Demo Structure\"")
         buildConfigBoolean("IS_PRODUCTION", false)
+        buildConfigString("IMAGE_BASE_URL", properties["IMAGE_BASE_URL"].toString() )
 
         resValue("string", "map_api_keys", properties["GOOGLE_MAP_KEY"].toString())
+        resValue("string", "dl_default", properties["DL_DEFAULT"].toString())
 
         manifestPlaceholders["firebase_performance_logcat_enabled"] = true
 
@@ -149,6 +151,7 @@ android {
             signingConfig = signingConfigs.getByName(SigningConfigs.development)
 
             buildConfigString("BASE_CONFIG_URL", properties["BASE_CONFIG_URL_DEV"].toString())
+            buildConfigString("API_KEY", properties["API_KEY_DEV"].toString())
 
             setFlavorConfigByBuildType(this)
         }
@@ -164,6 +167,7 @@ android {
             buildConfigBoolean("IS_PRODUCTION", true)
 
             buildConfigString("BASE_CONFIG_URL", properties["BASE_CONFIG_URL_PRO"].toString())
+            buildConfigString("API_KEY", properties["API_KEY_PRO"].toString())
 
             setFlavorConfigByBuildType(this)
         }
@@ -230,6 +234,7 @@ dependencies {
     implementation(project(Modules.presentation))
     implementation(project(Modules.common))
     implementation(project(Modules.uibase))
+    implementation(project(Modules.language))
 
     implementation(Di.core)
     implementation(Di.koin)
@@ -267,7 +272,11 @@ dependencies {
     implementation(AndroidX.browser)
     implementation(AndroidX.splash)
 
-    implementation("androidx.databinding:viewbinding:7.1.2")
+//    implementation("androidx.databinding:viewbinding:7.1.2")
+
+    implementation(Image.glide)
+    implementation(Image.glideOkhttp)
+    kapt(Image.glideCompiler)
 
     testImplementation(Test.junit)
     testImplementation(Test.coroutine)
