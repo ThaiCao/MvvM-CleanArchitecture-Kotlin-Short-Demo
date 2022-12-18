@@ -14,7 +14,7 @@ class HomeRepositoryImpl(
     override fun getHomeMenu(apiKey: String): Flow<Result<List<HomeMenu>>> {
         return homeService.getHomeMenu(apiKey)
             .map { hotMenus ->
-                homeMapper.toHomeMenuItems(hotMenus)
+                homeMapper.toHomeMenuItems(hotMenus.results)
             }
             .map {
                 Result.success(it)
@@ -24,7 +24,7 @@ class HomeRepositoryImpl(
     override fun getHomeHot(apiKey: String): Flow<Result<List<HotMenu>>> {
         return homeService.getHomeHot(apiKey)
             .map { hotMenus ->
-                homeMapper.toHotMenuItems(hotMenus)
+                homeMapper.toHotMenuItems(hotMenus.results)
             }
             .map {
                 Result.success(it)
@@ -34,7 +34,7 @@ class HomeRepositoryImpl(
     override fun getHomeNew(apiKey: String): Flow<Result<List<NewMenu>>> {
         return homeService.getHomeNew(apiKey)
             .map { hotMenus ->
-                homeMapper.toNewMenuItems(hotMenus)
+                homeMapper.toNewMenuItems(hotMenus.results)
             }
             .map {
                 Result.success(it)

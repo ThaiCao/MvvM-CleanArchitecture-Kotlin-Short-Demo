@@ -6,11 +6,12 @@ import com.example.structure.domain.feature.home.GetHomeHotUseCase
 import com.example.structure.domain.feature.home.GetHomeMenuUseCase
 import com.example.structure.domain.feature.home.GetHomeNewUseCase
 import com.example.structure.domain.model.HomeMenu
+import com.example.structure.domain.model.HotMenu
+import com.example.structure.domain.model.NewMenu
 import com.example.structure.presentation.base.BaseViewModel
 import com.example.structure.presentation.error.ErrorMessageHandler
-import com.example.structure.presentation.mapper.HomeMenuUiMapper
 import com.example.structure.presentation.model.ErrorUi
-import com.example.structure.presentation.model.HomeMenuUi
+import com.example.structure.presentation.model.HomeItemUi
 import com.example.structure.presentation.util.SingleLiveEvent
 
 class HomeViewModel(
@@ -18,24 +19,32 @@ class HomeViewModel(
     private val getHomeNewUseCase: GetHomeNewUseCase,
     private val getHomeMenuUseCase: GetHomeMenuUseCase,
     private val errorMessageHandler: ErrorMessageHandler,
-    private val homeMenuUiMapper: HomeMenuUiMapper,
+    private val homeMapper: HomeMapper,
 ) : BaseViewModel() {
 
     val onHomeMenuError = SingleLiveEvent<String>()
-    val homeMenus = MutableLiveData<List<HomeMenuUi>>()
+    val onShowHomeDetail = SingleLiveEvent<List<HomeItemUi>>()
 
-    fun getHomeMenu(apiKey: String) {
+    private var homeMenuItems: List<HomeMenu>? = null
+    private var hotMenuItems: List<HotMenu>? = null
+    private var newMenuItems: List<NewMenu>? = null
+
+    fun getHomeHotMenu(apiKey: String) {
         loading.value = true
-        getHomeMenuUseCase(
+        getHomeHotUseCase(
             viewModelScope,
-            GetHomeMenuUseCase.Params(
+            GetHomeHotUseCase.Params(
                 apiKey = apiKey
             )
-        ) {result ->
+        ) { result ->
             loading.value = false
             result.fold(onSuccess = {
-                homeMenus.value = toHomeMenuUis(it)
+//                homeMenus.value = toHomeMenuUis(it)
+                android.util.Log.e("TEST_DATA", "getHomeHotMenu SUCCESS")
+                hotMenuItems = it
+                showHomeMenuScreen()
             }, onFailure = { error ->
+                android.util.Log.e("TEST_DATA", "getHomeHotMenu error= $error")
                 when (val errorUi = errorMessageHandler.resolve(error)) {
                     is ErrorUi.Message -> onHomeMenuError.value = errorUi.message
                     else -> handleError(error)
@@ -44,9 +53,62 @@ class HomeViewModel(
         }
     }
 
-    private fun toHomeMenuUis(homeMenus: List<HomeMenu>): List<HomeMenuUi> {
-        return homeMenus.map {
-            homeMenuUiMapper.toHomeMenuUi(it)
-        }.toList()
+    fun getHomeNewMenu(apiKey: String) {
+        loading.value = true
+        getHomeNewUseCase(
+            viewModelScope,
+            GetHomeNewUseCase.Params(
+                apiKey = apiKey
+            )
+        ) { result ->
+            loading.value = false
+            result.fold(onSuccess = {
+//                homeMenus.value = toHomeMenuUis(it)
+                android.util.Log.e("TEST_DATA", "getHomeNewMenu SUCCESS")
+                newMenuItems = it
+                showHomeMenuScreen()
+            }, onFailure = { error ->
+                android.util.Log.e("TEST_DATA", "getHomeNewMenu error= $error")
+                when (val errorUi = errorMessageHandler.resolve(error)) {
+                    is ErrorUi.Message -> onHomeMenuError.value = errorUi.message
+                    else -> handleError(error)
+                }
+            })
+        }
+    }
+
+    fun getHomeMenu(apiKey: String) {
+        loading.value = true
+        getHomeMenuUseCase(
+            viewModelScope,
+            GetHomeMenuUseCase.Params(
+                apiKey = apiKey
+            )
+        ) { result ->
+            loading.value = false
+            result.fold(onSuccess = {
+//                homeMenus.value = toHomeMenuUis(it)
+                android.util.Log.e("TEST_DATA", "getHomeMenu SUCCESS")
+                homeMenuItems = it
+                showHomeMenuScreen()
+            }, onFailure = { error ->
+                android.util.Log.e("TEST_DATA", "getHomeMenu error= $error")
+                when (val errorUi = errorMessageHandler.resolve(error)) {
+                    is ErrorUi.Message -> onHomeMenuError.value = errorUi.message
+                    else -> handleError(error)
+                }
+            })
+        }
+    }
+
+
+    fun showHomeMenuScreen() {
+        val cartDetailItems =
+            homeMapper.toHomeDetailItems(
+                homeMovie = homeMenuItems,
+                newMovie = newMenuItems,
+                hotMovie = hotMenuItems
+            )
+        onShowHomeDetail.value = cartDetailItems
     }
 }

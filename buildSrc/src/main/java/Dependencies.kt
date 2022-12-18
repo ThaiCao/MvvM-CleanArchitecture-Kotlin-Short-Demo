@@ -44,6 +44,7 @@ object Coroutines {
 object Network {
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val gson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+    const val scalars = "com.squareup.retrofit2:converter-scalars:${Versions.retrofit}"
     const val okhttp_logging_interceptor =
         "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp_logging_interceptor}"
 }

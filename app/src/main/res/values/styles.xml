@@ -113,7 +113,7 @@
     </style>
 
     <style name="Text.Title.Small.OnSecondary.Container">
-        <item name="android:textColor">?attr/colorOnSecondaryContainer</item>
+<!--        <item name="android:textColor">?attr/colorOnSecondaryContainer</item>-->
     </style>
 
     <style name="Text.Title.ExtraLarge.OnPrimary.Container">
@@ -197,7 +197,7 @@
     </style>
 
     <style name="Paragraph.Medium.ClickAble">
-        <item name="android:background">?android:attr/selectableItemBackground</item>
+<!--        <item name="android:background">?android:attr/selectableItemBackground</item>-->
         <item name="android:clickable">true</item>
     </style>
 
@@ -206,7 +206,7 @@
     </style>
 
     <style name="Paragraph.Medium.Link.ClickAble">
-        <item name="android:background">?android:attr/selectableItemBackground</item>
+<!--        <item name="android:background">?android:attr/selectableItemBackground</item>-->
         <item name="android:clickable">true</item>
     </style>
 
@@ -473,7 +473,7 @@
 
     <style name="CardView.Custom">
         <item name="android:elevation">@dimen/elevation</item>
-        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+<!--        <item name="android:foreground">?android:attr/selectableItemBackground</item>-->
         <item name="cardCornerRadius">@dimen/radius_medium</item>
     </style>
 
@@ -562,12 +562,12 @@
     </style>
 
     <style name="BackgroundClickable">
-        <item name="android:background">?android:attr/selectableItemBackground</item>
+<!--        <item name="android:background">?android:attr/selectableItemBackground</item>-->
         <item name="android:clickable">true</item>
     </style>
 
     <style name="ForegroundClickable">
-        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+<!--        <item name="android:foreground">?android:attr/selectableItemBackground</item>-->
         <item name="android:clickable">true</item>
     </style>
 

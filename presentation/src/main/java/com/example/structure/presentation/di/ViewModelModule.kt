@@ -17,7 +17,7 @@ val viewModelModule = module {
             getHomeNewUseCase = get(),
             getHomeMenuUseCase = get(),
             errorMessageHandler = get(),
-            homeMenuUiMapper = get()
+            homeMapper = get()
         )
     }
 

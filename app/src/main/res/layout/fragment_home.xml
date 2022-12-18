@@ -31,34 +31,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:orientation="vertical">
-
-            <include
-                android:id="@+id/include_home_new"
-                layout="@layout/include_home_new"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_home_item" />
-
-            <include
-                android:id="@+id/include_home_hot"
-                layout="@layout/include_home_hot"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_home_item" />
-
-            <include
-                android:id="@+id/include_home_menu"
-                layout="@layout/include_home_menu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_home_item" />
-        </LinearLayout>
+            android:layout_below="@id/tvTitle"
+            android:layout_marginTop="10dp"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="true"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/padding_large"
+            android:paddingEnd="@dimen/padding_large"
+            android:paddingBottom="@dimen/padding_large" />
     </androidx.core.widget.NestedScrollView>
 
 

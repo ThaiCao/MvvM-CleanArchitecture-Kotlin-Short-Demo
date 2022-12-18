@@ -16,7 +16,7 @@ interface HomeMapper {
     fun toNewMenu(newMenuDto: NewMenuDto): NewMenu
 
     fun toHomeMenuItems(
-        menuDtos: List<HomeMenuDto>,
+        menuDtos: List<HomeMenuDto>?,
     ): List<HomeMenu>
 
     fun toHotMenuItems(
@@ -54,9 +54,9 @@ class HomeMapperImpl() : HomeMapper {
         )
     }
 
-    override fun toHomeMenuItems(menuDtos: List<HomeMenuDto>): List<HomeMenu> {
+    override fun toHomeMenuItems(menuDtos: List<HomeMenuDto>?): List<HomeMenu> {
         val menuItems = mutableListOf<HomeMenu>()
-        menuDtos.forEach { item ->
+        menuDtos?.forEach { item ->
             menuItems.add(HomeMenu(
                 id= item.id,
                 name= item.name,

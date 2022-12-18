@@ -31,6 +31,7 @@ import java.util.concurrent.TimeUnit
 
 val networkModule = module {
 
+
     single {
         createRetrofit(
             okHttpClient = get(),
@@ -40,14 +41,14 @@ val networkModule = module {
         )
     }
 
-    single(named(NAME_RETROFIT_FOR_CONFIG_SERVICE)) {
-        createConfigRetrofit(
-            okHttpClient = get(),
-            convertFactory = get(),
-            flowFactory = get(),
-            networkConfigs = get(),
-        )
-    }
+//    single(named(NAME_RETROFIT_FOR_CONFIG_SERVICE)) {
+//        createConfigRetrofit(
+//            okHttpClient = get(),
+//            convertFactory = get(),
+//            flowFactory = get(),
+//            networkConfigs = get(),
+//        )
+//    }
 
     single {
         provideOkHttpClient(
@@ -84,6 +85,7 @@ val networkModule = module {
 //    single<ApiErrorParser> { ApiErrorParserImpl() }
 
 //    single<CallAdapter.Factory>(named(NAME_RETROFIT_FOR_CUSTOMER_SERVICE)) {
+
     single<CallAdapter.Factory> {
         FlowCallAdapterFactory(
             apiResponseHandler = get(),
@@ -99,7 +101,6 @@ val networkModule = module {
                 .create()
         )
     }
-
 }
 
 private fun createRetrofit(
@@ -154,7 +155,7 @@ private fun provideInterceptors(
 ): List<Interceptor> {
     return listOf(
         provideHeaderInterceptor(networkConfigs, headerProvider),
-        provideGzipInterceptor(),
+//        provideGzipInterceptor(),
         provideLoggingInterceptor(networkConfigs)
     )
 }
@@ -186,7 +187,8 @@ private fun provideHeaderInterceptor(
             requestBuilder.addHeader(ACCEPT_LANGUAGE, networkConfigs.acceptLanguage)
         }
 
-        chain.proceed(requestBuilder.build())
+//        chain.proceed(requestBuilder.build())
+        chain.proceed(originalRequest.newBuilder().build())
     }
 }
 
