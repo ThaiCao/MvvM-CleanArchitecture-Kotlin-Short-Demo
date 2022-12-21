@@ -1,5 +1,7 @@
 package com.example.structure.di
 
+import com.example.structure.feature.detail.MovieDetailNavigator
+import com.example.structure.feature.detail.MovieDetailNavigatorImpl
 import com.example.structure.feature.home.HomeNavigator
 import com.example.structure.feature.home.HomeNavigatorImpl
 import com.example.structure.feature.signin.SignInNavigator
@@ -15,4 +17,6 @@ val navigatorModule = module {
     single<HomeNavigator> { HomeNavigatorImpl() }
 
     single<SignInNavigator> { SignInNavigatorImpl() }
+
+    single<MovieDetailNavigator> { MovieDetailNavigatorImpl() }
 }

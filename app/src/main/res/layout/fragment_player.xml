@@ -20,23 +20,6 @@
         android:gravity="center"
         android:textSize="28dp"
         android:textStyle="bold"
-        android:text="Movie Detail screen"/>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent">
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Login"/>
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnPlayer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Player"/>
-    </androidx.appcompat.widget.LinearLayoutCompat>
+        android:text="Player screen"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

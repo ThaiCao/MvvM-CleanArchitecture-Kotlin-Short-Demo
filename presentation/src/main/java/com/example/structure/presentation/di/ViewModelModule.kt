@@ -1,6 +1,8 @@
 package com.example.structure.presentation.di
 
 import com.example.structure.presentation.feature.home.HomeViewModel
+import com.example.structure.presentation.feature.moviedetail.MovieDetailViewModel
+import com.example.structure.presentation.feature.signin.SignInViewModel
 import com.example.structure.presentation.feature.splash.SplashViewModel
 import com.example.structure.presentation.mapper.HomeMenuUiMapper
 import com.example.structure.presentation.mapper.HomeMenuUiMapperImpl
@@ -23,5 +25,13 @@ val viewModelModule = module {
 
     viewModel {
         SplashViewModel()
+    }
+
+    viewModel {
+        MovieDetailViewModel()
+    }
+
+    viewModel {
+        SignInViewModel()
     }
 }

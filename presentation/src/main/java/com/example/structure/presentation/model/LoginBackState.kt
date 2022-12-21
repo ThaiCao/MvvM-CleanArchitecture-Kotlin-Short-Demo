@@ -11,4 +11,7 @@ sealed class LoginBackState : Parcelable {
     @Parcelize
     object ProfileState : LoginBackState() // go to profile screen
 
+    @Parcelize
+    object PlayerState : LoginBackState() // go to player screen
+
 }

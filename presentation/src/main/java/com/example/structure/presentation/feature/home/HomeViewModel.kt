@@ -1,6 +1,5 @@
 package com.example.structure.presentation.feature.home
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.structure.domain.feature.home.GetHomeHotUseCase
 import com.example.structure.domain.feature.home.GetHomeMenuUseCase

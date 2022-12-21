@@ -6,6 +6,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.structure.R
 import com.example.structure.databinding.ActivityMainBinding
+import com.example.structure.feature.detail.MovieDetailNavigator
 import com.example.structure.feature.dialog.InternetConnectionFailBottomSheet
 import com.example.structure.feature.home.HomeNavigator
 import com.example.structure.feature.internetconnection.InternetConnectionHelper
@@ -24,6 +25,7 @@ class MainActivity : BaseActivity(R.layout.activity_main) {
     private val splashNavigator: SplashNavigator by inject()
     private val homeNavigator: HomeNavigator by inject()
     private val signInNavigator: SignInNavigator by inject()
+    private val movieDetailNavigator: MovieDetailNavigator by inject()
 
 
     private val internetConnectionHelper: InternetConnectionHelper by inject()
@@ -47,6 +49,7 @@ class MainActivity : BaseActivity(R.layout.activity_main) {
         splashNavigator.bind(navController = navController)
         homeNavigator.bind(navController = navController)
         signInNavigator.bind(navController = navController)
+        movieDetailNavigator.bind(navController = navController)
     }
 
     override fun onResume() {
