@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="ToolBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?actionBarSize</item>
+        <item name="android:minHeight">?actionBarSize</item>
+        <item name="android:background">?colorPrimary</item>
+    </style>
+
+    <style name="ToolBarWithShadow" parent="ToolBar">
+        <item name="android:elevation">@dimen/elevation</item>
+    </style>
+
+    <style name="Text">
+        <item name="android:textColor">@drawable/primary_text_selector</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:hyphenationFrequency" tools:ignore="NewApi">normal</item>
+    </style>
+
+    <style name="Text.Title">
+        <item name="android:fontFamily">?fontTitleBold</item>
+    </style>
+
+    <style name="Text.Title.Header">
+        <item name="android:fontFamily">?fontTitleHeader</item>
+        <item name="android:textSize">@dimen/text_size_title_header</item>
+    </style>
+
+    <style name="Text.Title.Header.Link">
+        <item name="android:textColor">@drawable/link_text_selector</item>
+    </style>
+
+    <style name="Text.Title.Header.OnPrimary">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="Text.Title.Header.OnSecondary">
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+    </style>
+
+    <style name="Text.Title.Header.OnSurface">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="Text.Title.Header.OnSecondary.Container">
+        <item name="android:textColor">?attr/colorOnSecondaryContainer</item>
+    </style>
+
+    <style name="Text.Title.Large">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="Text.Title.ExtraLarge">
+        <item name="android:textSize">@dimen/text_size_extra_large</item>
+    </style>
+
+    <style name="Text.Title.Large.Error">
+        <item name="android:textColor">?colorError</item>
+    </style>
+
+    <style name="Text.Title.Large.OnError">
+        <item name="android:textColor">?colorOnError</item>
+    </style>
+
+    <style name="Text.Title.Large.OnPrimary">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="Text.Title.Large.OnSecondary">
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+    </style>
+
+    <style name="Text.Title.Large.OnSurface">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="Text.Title.ExtraLarge.OnPrimary">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="Text.Title.Medium">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="Text.Title.Medium.OnPrimary">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="Text.Title.Medium.OnSecondary">
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+    </style>
+
+    <style name="Text.Title.Medium.OnSurface">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="Text.Title.Small">
+        <item name="android:fontFamily">?fontTitleSemiBold</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="Text.Title.Small.OnError">
+        <item name="android:textColor">?attr/colorOnError</item>
+    </style>
+
+    <style name="Text.Title.Small.OnPrimary">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="Text.Title.Small.OnSecondary">
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+    </style>
+
+    <style name="Text.Title.Small.OnSecondary.Container">
+<!--        <item name="android:textColor">?attr/colorOnSecondaryContainer</item>-->
+    </style>
+
+    <style name="Text.Title.ExtraLarge.OnPrimary.Container">
+        <item name="android:textColor">?attr/colorOnPrimaryContainer</item>
+    </style>
+
+    <style name="Text.Title.Small.OnSurface">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="Text.Title.Tiny">
+        <item name="android:fontFamily">?fontTitleSemiBold</item>
+        <item name="android:textSize">@dimen/text_size_tiny</item>
+    </style>
+
+    <style name="Text.Title.Tiny.OnPrimary">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="Text.Title.Tiny.OnSurface">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="Text.Title.Tiny.OnPrimary.Container">
+        <item name="android:textColor">?attr/colorOnPrimaryContainer</item>
+    </style>
+
+    <style name="Text.Title.Tiny.OnSecondary">
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+    </style>
+
+    <style name="Text.Title.Tiny.OnSecondary.Container">
+        <item name="android:textColor">?attr/colorOnSecondaryContainer</item>
+    </style>
+    <style name="Text.Title.Tiny.OnPrimary.Container.Error">
+        <item name="android:textColor">?attr/colorError</item>
+    </style>
+
+    <style name="Paragraph" parent="Text" />
+
+    <style name="Paragraph.Large">
+        <item name="android:fontFamily">?fontParagraphRegular</item>
+        <item name="android:textSize">@dimen/text_size_paragraph_large</item>
+    </style>
+
+    <style name="Paragraph.Large.OnPrimary">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="Paragraph.Medium">
+        <item name="android:fontFamily">?fontParagraphRegular</item>
+        <item name="android:textSize">@dimen/text_size_paragraph_medium</item>
+    </style>
+
+    <style name="Paragraph.Medium.OnPrimary">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="Paragraph.Medium.OnSecondary">
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+    </style>
+
+    <style name="Paragraph.Medium.OnSecondary.Container">
+        <item name="android:textColor">?attr/colorOnSecondaryContainer</item>
+    </style>
+
+    <style name="Paragraph.Medium.OnPrimary.Container">
+        <item name="android:textColor">?attr/colorOnPrimaryContainer</item>
+    </style>
+
+    <style name="Paragraph.Medium.OnPrimary.Container.Inverse">
+        <item name="android:textColor">?attr/colorOnPrimaryContainerInverse</item>
+    </style>
+
+    <style name="Paragraph.Medium.OnSurface">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="Paragraph.Medium.OnSurface.Strong">
+        <item name="android:fontFamily">?fontParagraphSemiBold</item>
+    </style>
+
+    <style name="Paragraph.Medium.ClickAble">
+<!--        <item name="android:background">?android:attr/selectableItemBackground</item>-->
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="Paragraph.Medium.Link">
+        <item name="android:textColor">?attr/colorLink</item>
+    </style>
+
+    <style name="Paragraph.Medium.Link.ClickAble">
+<!--        <item name="android:background">?android:attr/selectableItemBackground</item>-->
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="Paragraph.Medium.OnPrimary.Strong">
+        <item name="android:fontFamily">?fontParagraphSemiBold</item>
+    </style>
+
+    <style name="Paragraph.Medium.Strong">
+        <item name="android:fontFamily">?fontParagraphSemiBold</item>
+    </style>
+
+    <style name="Paragraph.Medium.Strong.OnError">
+        <item name="android:textColor">?colorOnError</item>
+    </style>
+
+    <style name="Paragraph.Medium.Error">
+        <item name="android:textColor">?colorError</item>
+    </style>
+
+    <style name="Paragraph.Medium.Notification">
+        <item name="android:textColor">?colorOnPrimary</item>
+    </style>
+
+    <style name="Paragraph.Small">
+        <item name="android:fontFamily">?fontParagraphRegular</item>
+        <item name="android:textSize">@dimen/text_size_paragraph_small</item>
+    </style>
+
+    <style name="Paragraph.Small.OnSurface">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="Paragraph.Small.OnPrimary">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="Paragraph.Small.OnSecondary">
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+    </style>
+
+    <style name="Paragraph.Medium.Strong.OnSecondary">
+
+    </style>
+
+    <style name="Paragraph.Small.OnPrimary.Container">
+        <item name="android:textColor">?attr/colorOnContainer</item>
+    </style>
+
+    <style name="Paragraph.Small.OnSurface.Container">
+        <item name="android:textColor">?attr/colorOnContainer</item>
+    </style>
+
+    <style name="Paragraph.Tiny">
+        <item name="android:fontFamily">?fontParagraphRegular</item>
+        <item name="android:textSize">@dimen/text_size_paragraph_tiny</item>
+    </style>
+
+    <style name="Paragraph.Tiny.OnSecondary">
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+    </style>
+
+    <style name="Paragraph.Tiny.OnPrimary">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="Paragraph.Tiny.OnPrimary.Container">
+        <item name="android:textColor">?attr/colorOnPrimaryContainer</item>
+    </style>
+
+    <style name="Paragraph.Tiny.OnSecondary.Container">
+        <item name="android:textColor">?attr/colorOnSecondaryContainer</item>
+    </style>
+
+    <style name="Paragraph.Tiny.OnSecondary.Container.Strong">
+        <item name="android:fontFamily">?fontParagraphSemiBold</item>
+    </style>
+
+    <style name="Paragraph.Tiny.Strong">
+        <item name="android:fontFamily">?fontParagraphSemiBold</item>
+    </style>
+
+    <style name="Paragraph.Tiny.OnSurface">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="Paragraph.Tiny.OnSurface.Container">
+        <item name="android:textColor">?attr/colorOnContainer</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="Divider.Large">
+        <item name="android:layout_height">@dimen/divider_size_large</item>
+        <item name="android:background">?attr/colorDivider</item>
+    </style>
+
+    <style name="Divider.Small">
+        <item name="android:layout_height">@dimen/divider_size_small</item>
+        <item name="android:background">?attr/colorDivider</item>
+    </style>
+
+    <!--   Buttons   -->
+    <style name="Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/btn_height</item>
+        <item name="android:padding">@dimen/btn_padding_medium</item>
+        <item name="android:fontFamily">?fontButton</item>
+        <item name="android:gravity">center</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="Button.Primary">
+        <item name="android:background">@drawable/btn_primary_bg_selector</item>
+        <item name="android:textSize">@dimen/btn_label_medium</item>
+        <item name="android:textColor">@drawable/btn_primary_text_selector</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+
+    <style name="Button.Primary.Inverse">
+        <item name="android:background">@drawable/btn_primary_inverse_bg_selector</item>
+        <item name="android:textColor">@drawable/btn_primary_inverse_text_selector</item>
+        <item name="android:padding">@dimen/btn_padding_medium</item>
+    </style>
+
+    <style name="Button.Primary.Coupon">
+        <item name="android:background">@drawable/btn_primary_bg_border_right_selector</item>
+        <item name="android:textSize">@dimen/btn_label_medium</item>
+        <item name="android:textColor">@drawable/btn_primary_text_selector</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+
+    <style name="Button.Primary.Small">
+        <item name="android:layout_height">@dimen/btn_height_small</item>
+        <item name="android:padding">@dimen/btn_padding_small</item>
+        <item name="android:textSize">@dimen/text_size_paragraph_medium</item>
+    </style>
+
+    <style name="Button.Secondary">
+        <item name="android:background">@drawable/btn_secondary_bg_selector</item>
+        <item name="android:textSize">@dimen/btn_label_medium</item>
+        <item name="android:textColor">@drawable/btn_secondary_text_selector</item>
+        <item name="android:padding">@dimen/btn_padding_medium</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Button.Secondary.Inverse">
+        <item name="android:background">@drawable/btn_secondary_inverse_bg_selector</item>
+        <item name="android:textColor">@drawable/btn_secondary_inverse_text_selector</item>
+    </style>
+
+    <style name="Button.Secondary.Small">
+        <item name="android:layout_height">@dimen/btn_height_small</item>
+        <item name="android:padding">@dimen/btn_padding_small</item>
+        <item name="android:textSize">@dimen/text_size_paragraph_medium</item>
+    </style>
+
+    <style name="Button.Surface">
+        <item name="android:background">@drawable/btn_primary_bg_selector</item>
+        <item name="android:textSize">@dimen/btn_label_medium</item>
+        <item name="android:textColor">@drawable/btn_primary_text_selector</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+
+    <style name="Button.Surface.Inverse.NoBorder">
+        <item name="android:background">@drawable/btn_secondary_no_border_bg_selector</item>
+        <item name="android:textColor">@drawable/btn_secondary_text_selector</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+
+    <style name="Button.Error">
+        <item name="android:background">@drawable/btn_error_bg_selector</item>
+        <item name="android:textSize">@dimen/btn_label_medium</item>
+        <item name="android:textColor">@drawable/btn_error_text_selector</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+
+    <style name="Button.Error.Inverse">
+        <item name="android:background">@drawable/btn_error_inverse_bg_selector</item>
+        <item name="android:textColor">@drawable/btn_error_inverse_text_selector</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+
+    <style name="FieldLabel.Optional">
+        <item name="android:fontFamily">?fontParagraphRegular</item>
+        <item name="android:textSize">@dimen/text_size_paragraph_medium</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="EditTextField">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">?fontParagraphRegular</item>
+        <item name="android:textSize">@dimen/text_size_paragraph_large</item>
+        <item name="android:textColor">@drawable/text_field_text_selector</item>
+        <item name="android:textColorHint">?themeTextFieldColorHint</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical|start</item>
+    </style>
+
+    <style name="Text.Error">
+        <item name="android:fontFamily">?fontParagraphRegular</item>
+        <item name="android:textSize">@dimen/text_size_paragraph_medium</item>
+        <item name="android:textColor">?themeTextFieldError</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="Text.Error.Strong">
+        <item name="android:fontFamily">?fontTitleSemiBold</item>
+    </style>
+
+    <style name="FieldLabel">
+        <item name="android:fontFamily">?fontTitleSemiBold</item>
+        <item name="android:textSize">@dimen/text_size_paragraph_medium</item>
+        <item name="android:textColor">?themeFieldLabelColor</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="QuantityText" parent="Paragraph.Medium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/quantity_box_bg</item>
+        <item name="android:textColor">?themeTextColorQuantity</item>
+        <item name="android:padding">@dimen/padding_medium</item>
+        <item name="android:textAppearance">@style/Paragraph.Medium</item>
+    </style>
+
+    <!-- Tab -->
+    <style name="AppTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">?themeColorAccent</item>
+        <item name="tabIndicatorHeight">@dimen/tab_indicator_height</item>
+        <item name="tabBackground">@drawable/bg_tab</item>
+        <item name="tabTextAppearance">@style/AppTabTextAppearance</item>
+        <item name="tabSelectedTextColor">?tabSelectedTextColor</item>
+    </style>
+
+    <style name="TabTextAppearance" parent="TextAppearance.AppCompat.Button">
+        <item name="textAllCaps">false</item>
+        <item name="android:fontFamily">?fontTitleHeader</item>
+        <item name="android:textSize">@dimen/text_size_title_header</item>
+    </style>
+
+    <!-- for text -->
+    <style name="AppTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="tabTextColor">?tabTextColor</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:fontFamily">?fontTitleBold</item>
+        <item name="android:textSize">@dimen/text_size_title_header</item>
+    </style>
+
+    <style name="Toggle">
+        <item name="android:thumb">@drawable/switch_thumb</item>
+        <item name="track">@drawable/switch_track</item>
+    </style>
+
+    <style name="CardView.Custom">
+        <item name="android:elevation">@dimen/elevation</item>
+<!--        <item name="android:foreground">?android:attr/selectableItemBackground</item>-->
+        <item name="cardCornerRadius">@dimen/radius_medium</item>
+    </style>
+
+    <style name="CardView.Flat" parent="CardView.Custom">
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">@color/greyLighter2</item>
+        <item name="strokeWidth">@dimen/border_thin</item>
+    </style>
+
+    <style name="Card">
+        <item name="android:background">@drawable/card_bg</item>
+        <item name="android:layout_marginTop">@dimen/margin_large</item>
+        <item name="android:layout_marginStart">@dimen/margin_medium</item>
+        <item name="android:layout_marginEnd">@dimen/margin_medium</item>
+        <item name="android:layout_marginBottom">@dimen/margin_large</item>
+        <item name="android:padding">@dimen/padding_medium</item>
+        <item name="android:elevation">@dimen/elevation</item>
+        <item name="android:translationZ">@dimen/elevation</item>
+    </style>
+
+    <style name="Card.TopCorner">
+        <item name="android:padding">0dp</item>
+        <item name="android:background">@drawable/card_top_corner_bg</item>
+    </style>
+
+    <style name="CardHomeCategory">
+        <item name="android:background">@drawable/card_bg</item>
+        <item name="android:layout_marginTop">@dimen/margin_large</item>
+        <item name="android:layout_marginEnd">@dimen/margin_medium</item>
+        <item name="android:layout_marginBottom">@dimen/margin_large</item>
+        <item name="android:elevation">@dimen/elevation</item>
+        <item name="android:translationZ">@dimen/elevation</item>
+    </style>
+
+    <style name="RadioButton" parent="Text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingStart">@dimen/margin_medium</item>
+        <item name="android:paddingEnd">@dimen/margin_medium</item>
+        <item name="android:button">@drawable/radio_btn_selector</item>
+    </style>
+
+    <style name="RadioButton.OnSurface" />
+
+    <!-- BottomNavigationView !-->
+    <style name="BottomNavigationTextStyleActive">
+        <item name="android:fontFamily">?fontParagraphRegular</item>
+        <item name="android:textColor">?themeMenuNavSelectedColor</item>
+        <item name="android:textSize">@dimen/text_size_paragraph_small</item>
+    </style>
+
+    <style name="BottomNavigationTextStyleInActive">
+        <item name="android:fontFamily">?fontParagraphRegular</item>
+        <item name="android:textColor">?themeMenuNavTextColor</item>
+        <item name="android:textSize">@dimen/text_size_paragraph_small</item>
+    </style>
+
+    <style name="ItemPickerStyle">
+        <item name="android:fontFamily">?fontParagraphSemiBold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:textSize">@dimen/text_size_title_header</item>
+    </style>
+
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="BaseThemeBottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog" />
+
+    <style name="MenuItemPricePre">
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textSize">@dimen/text_size_paragraph_tiny</item>
+    </style>
+
+    <style name="BackgroundClickable">
+<!--        <item name="android:background">?android:attr/selectableItemBackground</item>-->
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="ForegroundClickable">
+<!--        <item name="android:foreground">?android:attr/selectableItemBackground</item>-->
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="DialogBottomToTopAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_top</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_top</item>
+    </style>
+
+    <style name="DialogLeftToRightAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_right</item>
+    </style>
+    <style name="Button.Surface.Inverse">
+        <item name="android:background">@drawable/btn_secondary_bg_selector</item>
+        <item name="android:textColor">@drawable/btn_secondary_text_selector</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+
+</resources>

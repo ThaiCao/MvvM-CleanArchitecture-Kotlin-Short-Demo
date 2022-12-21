@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="themeFieldLabelColor" format="reference" />
+    <attr name="themeTextFieldColorHint" format="reference" />
+    <attr name="themeTextFieldColor" format="reference" />
+    <attr name="themeTextFieldColorUnready" format="reference" />
+    <attr name="themeBackgroundTextField" format="reference" />
+    <attr name="themeBackgroundTextFieldUnready" format="reference" />
+    <attr name="themeBackgroundTextFieldBorderUnready" format="reference" />
+    <attr name="themeBackgroundTextFieldFocused" format="reference" />
+    <attr name="themeBackgroundTextFieldUnFocused" format="reference" />
+    <attr name="themeBackgroundTextFieldProgress" format="reference" />
+    <attr name="themeTextFieldError" format="reference" />
+
+    <attr name="hintText" format="string" />
+    <attr name="labelText" format="string" />
+    <attr name="isEnable" format="boolean" />
+    <attr name="isValidateOnTextChange" format="boolean" />
+
+    <declare-styleable name="CustomSearchTextField">
+        <attr name="hintText" />
+        <attr name="labelText" />
+        <attr name="isEnable" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomTextField">
+        <attr name="isOptional" format="boolean" />
+        <attr name="hintText" />
+        <attr name="labelText" />
+        <attr name="isEnable" />
+        <attr name="minLines" format="integer"/>
+        <attr name="maxLines" format="integer"/>
+        <attr name="singleLine" format="boolean"/>
+        <attr name="maxLength" format="integer"/>
+        <attr name="lines" format="integer"/>
+        <attr name="counterEnabled" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomPasswordField">
+        <attr name="hintText" />
+        <attr name="labelText" />
+        <attr name="isEnable" />
+        <attr name="isValidateOnTextChange" />
+    </declare-styleable>
+
+</resources>

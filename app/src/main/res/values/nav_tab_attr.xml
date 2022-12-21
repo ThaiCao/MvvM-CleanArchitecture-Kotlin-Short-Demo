@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="themeMenuNavSelectedColor" format="reference" />
+    <attr name="themeMenuNavTextColor" format="reference" />
+    <attr name="themeMenuNavTextSelectedColor" format="reference" />
+</resources>

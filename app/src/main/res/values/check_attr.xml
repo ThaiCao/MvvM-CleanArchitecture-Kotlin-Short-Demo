@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="themeColorCheckbox" format="color" />
+    <attr name="themeColorCheckboxFocused" format="color" />
+    <attr name="themeColorRadioBtn" format="color" />
+    <attr name="themeColorRadioBtnFocused" format="color" />
+    <attr name="themeColorSwitchTrackChecked" format="color" />
+    <attr name="themeColorSwitchTrackUnchecked" format="color" />
+</resources>

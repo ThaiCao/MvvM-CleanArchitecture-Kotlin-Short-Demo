@@ -1,0 +1,15 @@
+object Plugins {
+    const val androidApplication = "com.android.application"
+    const val androidLibrary = "com.android.library"
+    const val kotlinAndroid = "kotlin-android"
+    const val kotlin_parcelize = "kotlin-parcelize"
+    const val kotlinKapt = "kotlin-kapt"
+    const val detektPlugin = "io.gitlab.arturbosch.detekt"
+    const val kotlin = "kotlin"
+    const val koin = "koin"
+    const val java = "java-library"
+    const val jacoco = "com.vanniktech.android.junit.jacoco"
+    const val firebase_pref = "com.google.firebase.firebase-perf"
+    const val google_service = "com.google.gms.google-services"
+    const val crashlytics = "com.google.firebase.crashlytics"
+}

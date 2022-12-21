@@ -1,38 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="themeColorPrimary" format="reference" />
-    <attr name="themeTextColorPrimary" format="reference" />
-    <attr name="themeBackgroundPrimary" format="reference" />
-    <attr name="themeBackgroundSecondary" format="reference" />
-    <attr name="themeBackgroundWarning" format="reference" />
-    <attr name="themeTextLinkColor" format="reference" />
-    <attr name="themeDialogButtonColor" format="reference" />
+    <!-- Ref: https://m3.material.io/libraries/new-in-android-12 -->
+    <!-- Color attr of layer 1 -->
+    <attr name="colorOnPrimary" format="reference" />
+    <attr name="colorPrimaryContainer" format="reference" />
+    <attr name="colorOnPrimaryContainer" format="reference" />
+    <attr name="colorPrimaryContainerInverse" format="reference" />
+    <attr name="colorOnPrimaryContainerInverse" format="reference" />
+
+    <!-- Color attr of layer 2 (it is a layer put inside of layer 1) -->
+    <attr name="colorOnSecondary" format="reference" />
+    <attr name="colorSecondaryContainer" format="reference" />
+    <attr name="colorOnSecondaryContainer" format="reference" />
+    <attr name="colorSecondaryContainerInverse" format="reference" />
+    <attr name="colorOnSecondaryContainerInverse" format="reference" />
+
+    <!-- Color for all things related to warning -->
+    <attr name="colorWarning" format="reference" />
+    <attr name="colorOnWarning" format="reference" />
+    <attr name="colorWarningInverse" format="reference" />
+    <attr name="colorOnWarningInverse" format="reference" />
+
+    <!-- Color for all things related to suspend -->
+    <attr name="colorSuspend" format="reference" />
+    <attr name="colorOnSuspend" format="reference" />
+    <attr name="colorSuspendContainer" format="reference" />
+    <attr name="colorOnSuspendContainer" format="reference" />
+
+    <!-- Color for surface - is overlay on layer 1, layer 2, ... such as dialog, .. -->
+    <attr name="colorSurface" format="reference" />
+    <attr name="colorOnSurface" format="reference" />
+    <attr name="colorSurfaceContainer" format="reference" />
+    <attr name="colorOnSurfaceContainer" format="reference" />
+    <attr name="colorSurfaceContainerInverse" format="reference" />
+    <attr name="colorOnSurfaceContainerInverse" format="reference" />
+
+    <!-- Color for container in all layer with disable state -->
+    <attr name="colorContainer" format="reference" />
+    <attr name="colorOnContainer" format="reference" />
+    <attr name="colorContainerOverDown" format="reference" />
+
+    <attr name="colorOnError" format="reference" />
+    <attr name="colorLink" format="reference" />
+    <attr name="colorDivider" format="reference" />
+    <attr name="colorOnSnackBar" format="reference" />
+    <attr name="colorToast" format="reference" />
+    <attr name="colorAnchor" format="reference" />
     <attr name="themeColorAccent" format="reference" />
-    <attr name="themeBgToast" format="reference" />
-
-    <attr name="themeColorUnready" format="reference" />
-
-    <attr name="fontTitleBold" format="reference" />
-    <attr name="fontTitleHeader" format="reference" />
-    <attr name="fontTitleSemiBold" format="reference" />
-    <attr name="fontButton" format="reference" />
-    <attr name="fontParagraphRegular" format="reference" />
-    <attr name="fontParagraphSemiBold" format="reference" />
-    <attr name="fontParagraphLarge" format="reference" />
-
-    <attr name="themeColorError" format="reference" />
-    <attr name="themeColorShape" format="reference"/>
-
-    <attr name="themeTextColorButtonPrimary" format="reference" />
-    <attr name="themeTextColorButtonSecondary" format="reference" />
-    <attr name="themeTextColorButtonSecondaryOverDown" format="reference" />
-
-    <attr name="themeBackgroundButton" format="reference" />
-    <attr name="themeBackgroundButtonOverDown" format="reference" />
-
-    <attr name="themeBackgroundButtonSecondary" format="reference" />
-
-    <attr name="themeBackgroundButtonUnready" format="reference" />
-
-    <attr name="themeTextColorButtonUnready" format="reference" />
 </resources>

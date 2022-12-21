@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="themeColorQuantityDisabled" format="reference" />
+    <attr name="themeColorQuantity" format="reference" />
+    <attr name="themeColorQuantityPressed" format="reference" />
+
+    <attr name="themeBackgroundQuantityBox" format="reference" />
+    <attr name="themeTextColorQuantity" format="reference" />
+
+    <declare-styleable name="CustomQuantityControl">
+        <attr name="maxQuantity" format="integer" />
+        <attr name="minQuantity" format="integer" />
+        <attr name="defaultQuantity" format="integer" />
+    </declare-styleable>
+</resources>

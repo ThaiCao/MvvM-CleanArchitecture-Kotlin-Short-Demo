@@ -1,17 +1,28 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
-        jcenter()
     }
 }
-rootProject.name = "My Application"
+rootProject.name = "DemoStructure"
 include ':app'
-include ':data'
-include ':domain'
-include ':local'
-include ':remote'
-include ':presentation'
 include ':common'
-include ':tooltest'
+include ':data'
+include ':presentation'
+include ':testing'
+include ':language'
+include ':uibase'
+include ':deeplink'
+include ':network'
+include ':navigator'
+include ':di'
+include ':mapper'
+include ':domain'

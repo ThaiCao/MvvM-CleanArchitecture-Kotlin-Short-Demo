@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_nav_graph"
+    app:startDestination="@id/SignInFragment">
+
+    <fragment
+        android:id="@+id/SignInFragment"
+        android:name="com.example.structure.feature.signin.SignInFragment"
+        android:label="SignInFragment"
+        tools:layout="@layout/fragment_sign_in" />
+
+    <fragment
+        android:id="@+id/OtpFragment"
+        android:name="com.example.structure.feature.otp.OtpFragment"
+        android:label="AuthenticationOtpFragment"
+        tools:layout="@layout/fragment_otp" />
+
+    <fragment
+        android:id="@+id/SignupFragment"
+        android:name="com.example.structure.feature.signup.SignUpFragment"
+        android:label="SignupFragment"
+        tools:layout="@layout/fragment_sign_up" />
+
+    <fragment
+        android:id="@+id/ForgotPasswordFragment"
+        android:name="com.example.structure.feature.forgotpass.ForgotPasswordFragment"
+        android:label="RegistrationEmailPhoneFragment"
+        tools:layout="@layout/fragment_forgot_password">
+    </fragment>
+
+    <action
+        android:id="@+id/action_to_auth_otp"
+        app:destination="@id/OtpFragment" />
+
+    <action
+        android:id="@+id/action_to_signup"
+        app:destination="@id/SignupFragment" />
+
+    <action
+        android:id="@+id/action_to_forgot_password"
+        app:destination="@id/ForgotPasswordFragment" />
+
+    <action
+        android:id="@+id/action_to_sign_in"
+        app:destination="@id/SignInFragment" />
+
+</navigation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <size
+                android:width="@dimen/choice_size"
+                android:height="@dimen/choice_size" />
+            <corners android:radius="@dimen/radius_medium" />
+            <stroke
+                android:width="@dimen/border_thin"
+                android:color="?themeColorAccent" />
+        </shape>
+    </item>
+
+    <item android:drawable="@drawable/ic_green_tick" />
+</layer-list>

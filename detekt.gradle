@@ -1,0 +1,38 @@
+detekt {
+  input = files(                                        // The directories where detekt looks for source files. Defaults to `files("src/main/java", "src/main/kotlin")`.
+    "src/main/kotlin",
+    "gensrc/main/kotlin"
+  )
+  failFast = true // fail build on any finding
+  buildUponDefaultConfig = true // preconfigure defaults
+
+  autoCorrect = true
+
+  debug = false
+
+  config = files(rootProject.file("config/detekt/detekt.yml"))
+
+  // other detekt configuration goes here
+  baseline = file(rootProject.file("config/detekt/detekt-baseline.xml"))
+
+  ignoreFailures = false
+  ignoredBuildTypes = ["release"]
+  ignoredFlavors = ["prod"]
+  ignoredVariants = ["prodRelease"]
+
+  reports {
+    html {
+      enabled = true
+      destination = file("build/reports/detekt.html")
+    }
+    txt {
+      enabled = true                                // Enable/Disable TXT report (default: true)
+      destination = file("build/reports/detekt.txt") // Path where TXT report will be stored (default: `build/reports/detekt/detekt.txt`)
+    }
+  }
+}
+
+dependencies {
+  detekt(CodeQuality.detekt_formatting)
+  detekt(CodeQuality.detekt_cli)
+}

@@ -22,43 +22,76 @@
         android:orientation="vertical"
         app:layout_constraintGuide_end="@dimen/margin_extra_large" />
 
+    <com.example.structure.uibase.widget.image.CustomImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_black_cross"
+        tools:visibility="gone" />
 
-    <androidx.appcompat.widget.AppCompatTextView
+    <com.example.structure.uibase.widget.image.CustomImageView
+        android:id="@+id/iv_header_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_close"
+        tools:src="@drawable/ic_warning"
+        tools:visibility="gone" />
+
+    <com.example.structure.uibase.widget.textview.CustomTextView
         android:id="@+id/tv_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textAppearance="@style/Text.Title.Large"
+        android:textAppearance="@style/Text.Title.Large.OnSurface"
         app:layout_constraintEnd_toEndOf="@id/guide_line_end"
         app:layout_constraintStart_toStartOf="@id/guide_line_start"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Dialog title" />
+        app:layout_constraintTop_toBottomOf="@id/iv_header_icon"
+        tools:text="@string/dialog_tittle" />
 
-    <androidx.appcompat.widget.AppCompatTextView
+    <com.example.structure.uibase.widget.textview.CustomTextView
         android:id="@+id/tv_msg"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_extra_large"
         android:gravity="center"
-        android:textAppearance="@style/Paragraph.Medium"
+        android:textAppearance="@style/Paragraph.Medium.OnSurface"
         app:layout_constraintEnd_toEndOf="@id/guide_line_end"
         app:layout_constraintStart_toStartOf="@id/guide_line_start"
         app:layout_constraintTop_toBottomOf="@id/tv_title"
-        tools:text="Dialog message" />
+        tools:text="@string/dialog_message" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.example.structure.uibase.widget.button.CustomButton
         android:id="@+id/btn_positive"
-        style="@style/Button.Primary"
+        style="@style/Button.Surface"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_extra_large"
         android:textAllCaps="false"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@id/guide_line_end"
         app:layout_constraintStart_toStartOf="@id/guide_line_start"
         app:layout_constraintTop_toBottomOf="@id/tv_msg"
-        tools:text="OK"
+        tools:text="@string/yes"
         tools:visibility="visible" />
 
+    <com.example.structure.uibase.widget.button.CustomButton
+        android:id="@+id/btn_negative"
+        style="@style/Button.Surface.Inverse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_extra_large"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/guide_line_end"
+        app:layout_constraintStart_toStartOf="@id/guide_line_start"
+        app:layout_constraintTop_toBottomOf="@id/btn_positive"
+        tools:text="@string/no"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

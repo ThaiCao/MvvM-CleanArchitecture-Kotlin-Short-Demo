@@ -1,7 +1,7 @@
 val ktlint by configurations.creating
 
 dependencies {
-    ktlint(CodeQuality.pinterestKtlint)
+    ktlint(CodeQuality.pinterest_ktlint)
 }
 
 val outputDir = "${project.buildDir}/reports/ktlint/"
