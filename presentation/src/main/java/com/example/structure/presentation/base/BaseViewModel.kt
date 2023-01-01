@@ -1,8 +1,8 @@
 package com.example.structure.presentation.base
 
 import androidx.lifecycle.ViewModel
-import com.example.structure.presentation.model.ErrorUi
-import com.example.structure.presentation.model.NotificationUi
+import com.example.structure.model.presentation.ErrorUi
+import com.example.structure.model.presentation.NotificationUi
 import com.example.structure.presentation.util.SingleLiveEvent
 import com.github.ajalt.timberkt.Timber
 

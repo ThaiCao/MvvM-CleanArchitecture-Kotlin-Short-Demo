@@ -1,4 +1,4 @@
-package com.example.structure.presentation.model
+package com.example.structure.model.presentation
 
 data class Ratio(val width: Float, val height: Float) {
     companion object {

@@ -1,4 +1,4 @@
-package com.example.structure.domain.model
+package com.example.structure.model.domain
 
 data class HomeMenu(
     val id: Int,

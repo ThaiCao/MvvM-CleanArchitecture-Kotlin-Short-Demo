@@ -5,8 +5,8 @@ import android.view.View
 import com.example.structure.R
 import com.example.structure.common.fragmentparams.FragmentParams
 import com.example.structure.databinding.FragmentSignInBinding
+import com.example.structure.model.presentation.LoginBackState
 import com.example.structure.presentation.feature.signin.SignInViewModel
-import com.example.structure.presentation.model.LoginBackState
 import com.example.structure.uibase.extend.resetTranslucentStatusBar
 import com.example.structure.uibase.extend.viewBinding
 import com.example.structure.uibase.fragment.BaseFragment

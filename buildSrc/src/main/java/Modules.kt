@@ -9,4 +9,5 @@ object Modules {
     const val uibase = ":uibase"
     const val uiwidget = ":uiwidget"
     const val language = ":language"
+    const val model = ":model"
 }

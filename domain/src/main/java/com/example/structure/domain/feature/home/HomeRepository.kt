@@ -1,8 +1,6 @@
 package com.example.structure.domain.feature.home
 
-import com.example.structure.domain.model.HomeMenu
-import com.example.structure.domain.model.HotMenu
-import com.example.structure.domain.model.NewMenu
+import com.example.structure.model.domain.*
 import kotlinx.coroutines.flow.Flow
 
 interface HomeRepository {

@@ -1,11 +1,9 @@
 package com.example.structure.data.feature.home
 
-import com.example.structure.data.model.HomeMenuDto
-import com.example.structure.data.model.HotMenuDto
-import com.example.structure.data.model.NewMenuDto
-import com.example.structure.domain.model.HomeMenu
-import com.example.structure.domain.model.HotMenu
-import com.example.structure.domain.model.NewMenu
+import com.example.structure.model.data.HomeMenuDto
+import com.example.structure.model.data.HotMenuDto
+import com.example.structure.model.data.NewMenuDto
+import com.example.structure.model.domain.*
 
 interface HomeMapper {
 

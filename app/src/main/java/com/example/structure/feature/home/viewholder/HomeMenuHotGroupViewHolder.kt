@@ -4,8 +4,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.structure.R
 import com.example.structure.databinding.ItemHomeHotGroupBinding
-import com.example.structure.presentation.model.HomeItemUi
-import com.example.structure.uibase.adapter.BaseViewHolder
+import com.example.structure.model.presentation.HomeItemUi
 import com.example.structure.uibase.adapter.DifferentAdapter
 import com.example.structure.uibase.decoration.HorizontalPaddingDecoration
 import com.example.structure.uibase.extend.addDecorationItem

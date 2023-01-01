@@ -1,6 +1,6 @@
 package com.example.structure.presentation.error
 
-import com.example.structure.presentation.model.ErrorUi
+import com.example.structure.model.presentation.ErrorUi
 
 interface ErrorMessageHandler {
 

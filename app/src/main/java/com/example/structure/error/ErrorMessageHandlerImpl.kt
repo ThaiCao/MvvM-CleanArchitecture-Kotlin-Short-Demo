@@ -2,8 +2,8 @@ package com.example.structure.error
 
 import com.example.structure.R
 import com.example.structure.domain.exception.Failure
+import com.example.structure.model.presentation.ErrorUi
 import com.example.structure.presentation.error.ErrorMessageHandler
-import com.example.structure.presentation.model.ErrorUi
 import com.example.structure.uibase.extend.StringRes
 
 class ErrorMessageHandlerImpl(private val stringRes: StringRes) : ErrorMessageHandler {

@@ -3,8 +3,8 @@ package com.example.structure.uibase.widget.image
 import android.content.Context
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageView
-import com.example.structure.presentation.model.Ratio
-import com.example.structure.presentation.model.Ratio.Companion.DEFAULT_RATIO
+import com.example.structure.model.presentation.Ratio
+import com.example.structure.model.presentation.Ratio.Companion.DEFAULT_RATIO
 import com.example.structure.uibase.R
 
 class CustomRatioImageView @JvmOverloads constructor(

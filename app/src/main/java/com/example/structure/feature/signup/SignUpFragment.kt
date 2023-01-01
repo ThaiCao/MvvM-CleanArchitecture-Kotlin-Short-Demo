@@ -3,7 +3,7 @@ package com.example.structure.feature.signup
 import android.os.Bundle
 import com.example.structure.R
 import com.example.structure.common.fragmentparams.FragmentParams
-import com.example.structure.presentation.model.LoginBackState
+import com.example.structure.model.presentation.LoginBackState
 import com.example.structure.uibase.fragment.BaseFragment
 import com.example.structure.uibase.handler.StateUiOwner
 import kotlinx.parcelize.Parcelize

@@ -6,9 +6,9 @@ import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import com.example.structure.common.extend.isNotNullOrBlank
 import com.example.structure.common.extend.safe
+import com.example.structure.model.presentation.ErrorUi
+import com.example.structure.model.presentation.NotificationUi
 import com.example.structure.presentation.base.BaseViewModel
-import com.example.structure.presentation.model.ErrorUi
-import com.example.structure.presentation.model.NotificationUi
 import com.example.structure.uibase.R
 import com.example.structure.uibase.dialogfragment.CustomLoadingDialog
 import com.example.structure.uibase.extend.showSimpleDialog

@@ -1,4 +1,4 @@
-package com.example.structure.presentation.model
+package com.example.structure.model.presentation
 
 data class StepperData(
     val value: String,

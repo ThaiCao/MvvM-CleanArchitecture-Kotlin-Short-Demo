@@ -5,8 +5,8 @@ import com.example.structure.R
 import com.example.structure.databinding.ItemHomeHotRowBinding
 import com.example.structure.databinding.ItemHomeMenuRowBinding
 import com.example.structure.databinding.ItemHomeNewRowBinding
-import com.example.structure.presentation.model.HomeItemUi
-import com.example.structure.presentation.model.SimpleItem
+import com.example.structure.model.presentation.HomeItemUi
+import com.example.structure.model.presentation.SimpleItem
 import com.example.structure.uibase.adapter.BaseViewHolder
 import com.example.structure.uibase.extend.bindCenterCrop
 

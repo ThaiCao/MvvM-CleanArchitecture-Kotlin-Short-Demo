@@ -1,11 +1,11 @@
 package com.example.structure.feature.home
 
 import com.example.structure.R
-import com.example.structure.domain.model.HomeMenu
-import com.example.structure.domain.model.HotMenu
-import com.example.structure.domain.model.NewMenu
+import com.example.structure.model.domain.HomeMenu
+import com.example.structure.model.domain.HotMenu
+import com.example.structure.model.domain.NewMenu
+import com.example.structure.model.presentation.HomeItemUi
 import com.example.structure.presentation.feature.home.HomeMapper
-import com.example.structure.presentation.model.HomeItemUi
 
 class HomeMapperImpl: HomeMapper {
     private val primarySpace = HomeItemUi.SpaceItem(colorAttr = R.attr.colorOnPrimary)

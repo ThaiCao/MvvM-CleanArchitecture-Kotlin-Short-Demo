@@ -2,7 +2,7 @@ package com.example.structure.feature.home.viewholder
 
 import com.example.structure.BuildConfig.IMAGE_BASE_URL
 import com.example.structure.databinding.ItemHomeNewRowBinding
-import com.example.structure.presentation.model.HomeItemUi
+import com.example.structure.model.presentation.HomeItemUi
 import com.example.structure.uibase.adapter.BaseViewHolder
 import com.example.structure.uibase.extend.bindCenterCrop
 

@@ -41,6 +41,7 @@ android {
 }
 
 dependencies {
+    implementation(project(Modules.model))
     implementation(project(Modules.common))
     implementation(project(Modules.deeplink))
     implementation(project(Modules.language))

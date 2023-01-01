@@ -1,4 +1,4 @@
-//package com.example.structure.presentation.model
+package com.example.structure.model.presentation//package com.example.structure.presentation.model
 //
 //abstract class ItemHome(override val type: Int) : ItemDifferent {
 //    companion object {

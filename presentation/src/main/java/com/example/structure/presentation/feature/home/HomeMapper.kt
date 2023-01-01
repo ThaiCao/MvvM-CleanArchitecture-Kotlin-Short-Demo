@@ -1,9 +1,7 @@
 package com.example.structure.presentation.feature.home
 
-import com.example.structure.domain.model.HomeMenu
-import com.example.structure.domain.model.HotMenu
-import com.example.structure.domain.model.NewMenu
-import com.example.structure.presentation.model.HomeItemUi
+import com.example.structure.model.domain.*
+import com.example.structure.model.presentation.HomeItemUi
 
 interface HomeMapper {
 
