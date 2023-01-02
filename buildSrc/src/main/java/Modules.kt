@@ -10,5 +10,4 @@ object Modules {
     const val uiwidget = ":uiwidget"
     const val language = ":language"
     const val model = ":model"
-    const val mapper = ":mapper"
 }

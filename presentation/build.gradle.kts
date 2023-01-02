@@ -38,7 +38,6 @@ android {
 
 dependencies {
     implementation(project(Modules.model))
-    implementation(project(Modules.mapper))
     implementation(project(Modules.domain))
     implementation(project(Modules.common))
 

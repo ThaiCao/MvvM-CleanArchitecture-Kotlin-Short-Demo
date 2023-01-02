@@ -4,7 +4,6 @@ import androidx.lifecycle.viewModelScope
 import com.example.structure.domain.feature.home.GetHomeHotUseCase
 import com.example.structure.domain.feature.home.GetHomeMenuUseCase
 import com.example.structure.domain.feature.home.GetHomeNewUseCase
-import com.example.structure.mapper.feature.home.HomeMapper
 import com.example.structure.model.domain.*
 import com.example.structure.model.presentation.ErrorUi
 import com.example.structure.presentation.base.BaseViewModel

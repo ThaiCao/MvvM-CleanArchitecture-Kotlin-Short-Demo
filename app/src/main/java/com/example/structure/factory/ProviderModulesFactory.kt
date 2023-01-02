@@ -7,7 +7,6 @@ import com.example.structure.di.appModule
 import com.example.structure.di.navigatorModule
 import com.example.structure.di.networkModule
 import com.example.structure.domain.di.useCaseModule
-import com.example.structure.mapper.di.mapperModule
 import com.example.structure.presentation.di.viewModelModule
 import org.koin.core.module.Module
 
@@ -27,9 +26,6 @@ class ProviderModulesFactoryImpl : ProviderModulesFactory {
             apiServiceModule,
             managerModule,
             repositoryModule,
-
-            // mapper
-            mapperModule,
 
             //domain module
             useCaseModule,

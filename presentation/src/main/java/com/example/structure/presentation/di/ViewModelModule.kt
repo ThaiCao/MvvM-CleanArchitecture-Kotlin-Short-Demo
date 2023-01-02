@@ -4,10 +4,15 @@ import com.example.structure.presentation.feature.home.HomeViewModel
 import com.example.structure.presentation.feature.moviedetail.MovieDetailViewModel
 import com.example.structure.presentation.feature.signin.SignInViewModel
 import com.example.structure.presentation.feature.splash.SplashViewModel
-import org.koin.androidx.viewmodel.dsl.viewModel
+import com.example.structure.presentation.mapper.HomeMenuUiMapper
+import com.example.structure.presentation.mapper.HomeMenuUiMapperImpl
 import org.koin.dsl.module
+import org.koin.androidx.viewmodel.dsl.viewModel
 
 val viewModelModule = module {
+
+    factory<HomeMenuUiMapper> { HomeMenuUiMapperImpl() }
+
     viewModel {
         HomeViewModel(
             getHomeHotUseCase = get(),

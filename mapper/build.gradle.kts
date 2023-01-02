@@ -1,9 +1,6 @@
 plugins {
-    id(Plugins.androidLibrary)
-    id(Plugins.kotlinAndroid)
-    id(Plugins.detektPlugin)
-    id(Plugins.kotlin_parcelize)
-    id(Plugins.kotlinKapt)
+    id("com.android.library")
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
@@ -36,14 +33,8 @@ android {
 }
 
 dependencies {
-    implementation(project(Modules.model))
 
-    implementation(Kotlin.core)
-    implementation(Kotlin.kotlin)
-
-    implementation(Di.core)
-
-//    implementation("androidx.core:core-ktx:1.7.0")
+    implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.appcompat:appcompat:1.5.0")
     implementation("com.google.android.material:material:1.6.1")
     testImplementation("junit:junit:4.13.2")
