@@ -1,13 +1,68 @@
-package com.example.structure.feature.home
+package com.example.structure.mapper.feature.home
 
-import com.example.structure.R
+import com.example.structure.mapper.R
+import com.example.structure.model.data.HomeMenuDto
+import com.example.structure.model.data.HotMenuDto
+import com.example.structure.model.data.NewMenuDto
 import com.example.structure.model.domain.HomeMenu
 import com.example.structure.model.domain.HotMenu
 import com.example.structure.model.domain.NewMenu
 import com.example.structure.model.presentation.HomeItemUi
-import com.example.structure.presentation.feature.home.HomeMapper
 
-class HomeMapperImpl: HomeMapper {
+interface HomeMapper {
+    fun toHomeMenuItems(
+        menuDtos: List<HomeMenuDto>?,
+    ): List<HomeMenu>
+
+    fun toHotMenuItems(
+        menuDtos: List<HotMenuDto>,
+    ): List<HotMenu>
+
+    fun toNewMenuItems(
+        menuDtos: List<NewMenuDto>,
+    ): List<NewMenu>
+
+    fun toHomeDetailItems(homeMovie: List<HomeMenu>?, newMovie: List<NewMenu>?, hotMovie: List<HotMenu>?): List<HomeItemUi>
+}
+
+class HomeMapperImpl() : HomeMapper {
+
+    override fun toHomeMenuItems(menuDtos: List<HomeMenuDto>?): List<HomeMenu> {
+        val menuItems = mutableListOf<HomeMenu>()
+        menuDtos?.forEach { item ->
+            menuItems.add(HomeMenu(
+                id= item.id,
+                name= item.name,
+                imageUrl= item.imageUrl
+            ))
+        }
+        return menuItems
+    }
+
+    override fun toHotMenuItems(menuDtos: List<HotMenuDto>): List<HotMenu> {
+        val menuItems = mutableListOf<HotMenu>()
+        menuDtos.forEach { item ->
+            menuItems.add(HotMenu(
+                id= item.id,
+                name= item.name,
+                imageUrl= item.imageUrl
+            ))
+        }
+        return menuItems
+    }
+
+    override fun toNewMenuItems(menuDtos: List<NewMenuDto>): List<NewMenu> {
+        val menuItems = mutableListOf<NewMenu>()
+        menuDtos.forEach { item ->
+            menuItems.add(NewMenu(
+                id= item.id,
+                name= item.name,
+                imageUrl= item.imageUrl
+            ))
+        }
+        return menuItems
+    }
+
     private val primarySpace = HomeItemUi.SpaceItem(colorAttr = R.attr.colorOnPrimary)
     private val secondarySpace = HomeItemUi.SpaceItem(colorAttr = R.attr.colorOnSecondary)
 
@@ -27,7 +82,7 @@ class HomeMapperImpl: HomeMapper {
         if (menuItems.isNullOrEmpty()) return emptyList()
         return listOf(
             HomeItemUi.PopularMovieItem(toItemMenuRows(menuItems)),
-            secondarySpace
+            primarySpace
         )
     }
 
@@ -47,7 +102,7 @@ class HomeMapperImpl: HomeMapper {
         if (menuItems.isNullOrEmpty()) return emptyList()
         return listOf(
             HomeItemUi.HotMovieItem(toItemHotRows(menuItems)),
-            secondarySpace
+            primarySpace
         )
     }
 
@@ -67,7 +122,7 @@ class HomeMapperImpl: HomeMapper {
         if (menuItems.isNullOrEmpty()) return emptyList()
         return listOf(
             HomeItemUi.NewMovieItem(toItemNewRows(menuItems)),
-            secondarySpace
+            primarySpace
         )
     }
 
@@ -88,5 +143,4 @@ class HomeMapperImpl: HomeMapper {
         }
         return items
     }
-
 }
