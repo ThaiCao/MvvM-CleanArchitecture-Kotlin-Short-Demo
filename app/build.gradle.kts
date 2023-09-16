@@ -229,12 +229,10 @@ tasks {
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation(project(Modules.model))
-//    implementation(project(Modules.mapper))
     implementation(project(Modules.data))
     implementation(project(Modules.domain))
     implementation(project(Modules.presentation))
     implementation(project(Modules.common))
-    implementation(project(Modules.language))
 
     implementation(Di.core)
     implementation(Di.koin)

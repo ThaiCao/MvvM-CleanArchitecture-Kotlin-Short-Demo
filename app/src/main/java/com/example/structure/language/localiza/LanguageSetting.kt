@@ -3,8 +3,8 @@ package com.example.structure.language.localiza
 import android.content.Context
 import com.example.structure.data.storage.SharedPreferenceConst.PREF_LANGUAGE
 import com.example.structure.data.storage.reference
+import com.example.structure.di.provideSharePreferences
 import com.example.structure.language.Language
-import com.example.structure.language.di.provideSharePreferences
 import com.example.structure.language.toLanguage
 import com.example.structure.language.toLocale
 import java.util.*
