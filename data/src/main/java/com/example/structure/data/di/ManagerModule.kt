@@ -1,5 +1,7 @@
 package com.example.structure.data.di
 
+import com.example.structure.data.mapper.HomeMapper
+import com.example.structure.data.mapper.HomeMapperImpl
 import com.example.structure.data.storage.SharedPreferenceConst
 import com.example.structure.data.storage.UserStorage
 import com.example.structure.data.storage.UserStorageImpl
@@ -13,5 +15,5 @@ val managerModule = module {
             pref = get(named(SharedPreferenceConst.PREF_SECURE_USER))
         )
     }
-
+    factory<HomeMapper> { HomeMapperImpl() }
 }

@@ -4,6 +4,8 @@ import com.example.structure.presentation.feature.home.HomeViewModel
 import com.example.structure.presentation.feature.moviedetail.MovieDetailViewModel
 import com.example.structure.presentation.feature.signin.SignInViewModel
 import com.example.structure.presentation.feature.splash.SplashViewModel
+import com.example.structure.presentation.mapper.HomeMapper
+import com.example.structure.presentation.mapper.HomeMapperImpl
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -29,4 +31,6 @@ val viewModelModule = module {
     viewModel {
         SignInViewModel()
     }
+
+    factory<HomeMapper> { HomeMapperImpl() }
 }

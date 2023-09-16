@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <item name="global_action_to_home" type="id" />
-    <item name="global_action_to_category" type="id" />
-    <item name="global_action_to_detail" type="id" />
-</resources>
