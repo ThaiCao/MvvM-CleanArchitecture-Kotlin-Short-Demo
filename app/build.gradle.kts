@@ -234,7 +234,7 @@ dependencies {
     implementation(project(Modules.domain))
     implementation(project(Modules.presentation))
     implementation(project(Modules.common))
-    implementation(project(Modules.uibase))
+//    implementation(project(Modules.uibase))
     implementation(project(Modules.language))
 
     implementation(Di.core)

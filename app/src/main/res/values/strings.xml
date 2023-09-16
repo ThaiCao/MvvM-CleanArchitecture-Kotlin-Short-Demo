@@ -13,4 +13,5 @@
     <string name="view_more">View more</string>
     <string name="text_loading">Loading…</string>
     <string name="splash_fragment_label">Splash Fragment</string>
+    <string name="label_main_graph_navigation">main nav</string>
 </resources>
