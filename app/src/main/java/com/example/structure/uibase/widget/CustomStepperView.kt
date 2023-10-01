@@ -10,8 +10,10 @@ import android.view.View
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.toBitmap
-import com.example.structure.model.presentation.*
 import com.example.structure.R
+import com.example.structure.presentation.model.SingleSelectableList
+import com.example.structure.presentation.model.StepperData
+import com.example.structure.presentation.model.StepperState
 import com.example.structure.uibase.extend.getThemeColor
 import com.example.structure.uibase.extend.toPx
 

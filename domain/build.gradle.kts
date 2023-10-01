@@ -36,20 +36,9 @@ android {
 }
 
 dependencies {
-    implementation(project(Modules.model))
     implementation(Kotlin.kotlin)
     implementation(Di.core)
     implementation(Coroutines.core)
     implementation(Coroutines.coroutines)
     testImplementation("junit:junit:4.13.2")
 }
-
-
-//val compileKotlin: org.jetbrains.kotlin.gradle.tasks.KotlinCompile by tasks
-//compileKotlin.kotlinOptions {
-//    freeCompilerArgs = freeCompilerArgs + "-Xallow-result-return-type"
-//}
-//
-//tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-//    kotlinOptions.jvmTarget = "1.8"
-//}

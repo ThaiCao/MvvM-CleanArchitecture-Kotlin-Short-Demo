@@ -2,7 +2,9 @@ package com.example.structure.data.feature.home
 
 import com.example.structure.data.mapper.HomeMapper
 import com.example.structure.domain.feature.home.HomeRepository
-import com.example.structure.model.domain.*
+import com.example.structure.domain.model.HomeMenu
+import com.example.structure.domain.model.HotMenu
+import com.example.structure.domain.model.NewMenu
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 

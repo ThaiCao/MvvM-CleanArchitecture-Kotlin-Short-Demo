@@ -3,9 +3,9 @@ package com.example.structure.feature.signin
 import com.example.structure.R
 import com.example.structure.feature.otp.OtpFragment
 import com.example.structure.feature.signup.SignUpFragment
-import com.example.structure.model.presentation.LoginBackState
 import com.example.structure.navigation.BaseNavigator
 import com.example.structure.navigation.BaseNavigatorImpl
+import com.example.structure.presentation.model.LoginBackState
 import com.example.structure.uibase.extend.navOptions
 import com.example.structure.uibase.extend.safeNavigate
 

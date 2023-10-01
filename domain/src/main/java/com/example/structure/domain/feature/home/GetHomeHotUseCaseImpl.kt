@@ -1,6 +1,6 @@
 package com.example.structure.domain.feature.home
 
-import com.example.structure.model.domain.HotMenu
+import com.example.structure.domain.model.HotMenu
 import com.example.structure.domain.usecase.DispatcherProvider
 import kotlinx.coroutines.flow.Flow
 

@@ -7,8 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
-import com.example.structure.model.presentation.NotificationUi
 import com.example.structure.R
+import com.example.structure.presentation.model.NotificationUi
 import com.example.structure.uibase.extend.show
 import com.example.structure.uibase.widget.image.CustomImageView
 

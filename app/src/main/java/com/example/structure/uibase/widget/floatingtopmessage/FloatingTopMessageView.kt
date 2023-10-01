@@ -13,8 +13,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner
-import com.example.structure.model.presentation.NotificationUi
 import com.example.structure.R
+import com.example.structure.presentation.model.NotificationUi
 import com.example.structure.uibase.widget.CustomNotificationLayout
 
 class FloatingTopMessageView @JvmOverloads constructor(

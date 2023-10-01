@@ -37,8 +37,6 @@ android {
 
 dependencies {
     implementation(project(Modules.common))
-    implementation(project(Modules.model))
-//    implementation(project(Modules.mapper))
     implementation(project(Modules.domain))
 
     implementation(Kotlin.core)

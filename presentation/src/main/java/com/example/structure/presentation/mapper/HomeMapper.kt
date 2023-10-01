@@ -1,10 +1,10 @@
 package com.example.structure.presentation.mapper
 
-import com.example.structure.model.domain.HomeMenu
-import com.example.structure.model.domain.HotMenu
-import com.example.structure.model.domain.NewMenu
-import com.example.structure.model.presentation.HomeItemUi
+import com.example.structure.domain.model.HomeMenu
+import com.example.structure.domain.model.HotMenu
+import com.example.structure.domain.model.NewMenu
 import com.example.structure.presentation.R
+import com.example.structure.presentation.model.HomeItemUi
 
 interface HomeMapper {
     fun toHomeDetailItems(homeMovie: List<HomeMenu>?, newMovie: List<NewMenu>?, hotMovie: List<HotMenu>?): List<HomeItemUi>

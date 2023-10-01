@@ -3,7 +3,7 @@ package com.example.structure.presentation.util
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
-import com.example.structure.model.presentation.LatLng
+import com.example.structure.presentation.model.LatLng
 
 fun Activity.openMapView(location: LatLng?) {
     val uri = Uri.parse("http://maps.google.com/maps")

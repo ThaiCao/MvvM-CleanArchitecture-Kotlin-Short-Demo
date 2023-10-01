@@ -5,11 +5,11 @@ import com.example.structure.databinding.ItemHomeHotGroupBinding
 import com.example.structure.databinding.ItemHomeNewGroupBinding
 import com.example.structure.databinding.ItemHomePopularGroupBinding
 import com.example.structure.databinding.ItemHomeSpaceBinding
-import com.example.structure.model.presentation.*
-import com.example.structure.model.presentation.HomeItemUi.Companion.TYPE_MOVIE_HOT
-import com.example.structure.model.presentation.HomeItemUi.Companion.TYPE_MOVIE_NEW
-import com.example.structure.model.presentation.HomeItemUi.Companion.TYPE_MOVIE_POPULAR
-import com.example.structure.model.presentation.HomeItemUi.Companion.TYPE_SPACE
+import com.example.structure.presentation.model.HomeItemUi
+import com.example.structure.presentation.model.HomeItemUi.Companion.TYPE_MOVIE_HOT
+import com.example.structure.presentation.model.HomeItemUi.Companion.TYPE_MOVIE_NEW
+import com.example.structure.presentation.model.HomeItemUi.Companion.TYPE_MOVIE_POPULAR
+import com.example.structure.presentation.model.HomeItemUi.Companion.TYPE_SPACE
 import com.example.structure.uibase.extend.get
 import com.example.structure.uibase.extend.getThemeColor
 import com.example.structure.uibase.extend.toPx

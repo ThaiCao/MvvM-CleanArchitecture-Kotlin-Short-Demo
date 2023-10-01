@@ -1,7 +1,7 @@
 package com.example.structure.uibase.adapter
 
 import androidx.recyclerview.widget.RecyclerView
-import com.example.structure.model.presentation.SingleSelectableList
+import com.example.structure.presentation.model.SingleSelectableList
 
 @Suppress("unchecked_cast")
 abstract class SingleSelectableRecyclerAdapter<T> :
